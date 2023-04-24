@@ -1,0 +1,15 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity alu1 is
+	--An ALU that has 2 16 bit inputs, 2 select lines, an output X and 2 flags Carry C and Zero Z
+	port (
+	A: in std_logic_vector(15 downto 0);
+	B: in std_logic_vector(15 downto 0);
+	sel: in std_logic;
+	X: out std_logic_vector(15 downto 0);
+	C: out std_logic;
+	Z: out std_logic);
+end alu;
+
+architecture pc of alu1 is
