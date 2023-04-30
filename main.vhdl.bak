@@ -1,0 +1,15 @@
+library ieee;
+use ieee.numeric_std.all;
+use ieee.std_logic_1164.all;
+use ieee.math_real.all;
+
+library work;
+use work.basic.all;
+use work.pipeline_register.all;
+
+entity processor is
+	port(
+		clk, reset: in std_logic;
+end entity;
+
+architecture pipelined of 
