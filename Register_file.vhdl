@@ -44,6 +44,6 @@ RF_writing : process(PC_w, RF_W,clock)
 -- RF reading is asynchronous 
 D1 <= registers(to_integer(unsigned(A1)));
 D2 <= registers(to_integer(unsigned(A2)));
-PC_read <= registers(7);
+PC_read <= registers(0);
 
 end architecture behav;
