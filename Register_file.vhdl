@@ -25,19 +25,14 @@ signal registers : reg_array_type := (0 => "0000000000000001",1 => "000000000000
 begin 
 
 -- RF writing is synchronous
-RF_writing : process(PC_w, RF_W,clock,reset)
+RF_writing : process(PC_w, RF_W,clock)
     begin
-        if (reset = '1') then
-            L1 : for i in 0 to 7 loop
-                registers(i) <= "0000000000000000";
-            end loop L1;
-
-        elsif(rising_edge(clock)) then
-				if (RF_W = '1') then
+        if(rising_edge(clock)) then
+		if (RF_W = '1') then
                 registers(to_integer(unsigned(A3))) <= D3;
             
             elsif (PC_w = '1') then
-                registers(7) <= PC_write;
+                registers(0) <= PC_write;
             else
                 null;
             end if;
