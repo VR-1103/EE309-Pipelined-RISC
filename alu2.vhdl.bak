@@ -6,8 +6,7 @@ entity alu2 is
 	port (
 	A: in std_logic_vector(15 downto 0);
 	B: in std_logic_vector(15 downto 0);
-	disable: in std_logic;
-	sel: in std_logic_vector(1 downto 0);
+	sel: in std_logic;
 	X: out std_logic_vector(15 downto 0);
 	C: out std_logic;
 	Z: out std_logic);
@@ -36,42 +35,24 @@ architecture execute of alu2 is
 	begin
 	alu_proc: process(A,B,sel)
 	variable temp: std_logic_vector(16 downto 0);
-	variable tempa: std_logic_vector(15 downto 0);
-	variable tempb: std_logic_vector(15 downto 0);
 	begin
-		if (disable = '0') then
-			if sel="00" then
-				temp := add(A,B);
-				X <= temp(15 downto 0);
-				C <= temp(16);
-				if temp(15 downto 0)="0000000000000000" then
-					Z<='1';
-				else 
-					Z<='0';
-				end if;
-			elsif sel="01"
-				X<= A nand B;
-				C<='0';
-				if (A nand B)="0000000000000000" then
-					Z<='1';
-				else 
-					Z<='0';
-				end if;
-			else
-				tempa := A;
-				tempb := B;
-				if (tempa = tempb) then
-					C<='0';
-					Z<='1';
-				elsif (tempa < tempb) then
-					C<='1';
-					Z<='0';
-				else
-					C<='0';
-					Z<='0';
-				end if;
+		if sel='0' then
+			temp := add(A,B);
+			X <= temp(15 downto 0);
+			C <= temp(16);
+			if temp(15 downto 0)="0000000000000000" then
+				Z<='1';
+			else 
+				Z<='0';
 			end if;
-		else null;
+		else
+			X<= A nand B;
+			C<='0';
+			if (A nand B)="0000000000000000" then
+				Z<='1';
+			else 
+				Z<='0';
+			end if;
 		end if;
 	end process;
 

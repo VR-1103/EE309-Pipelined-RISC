@@ -31,7 +31,7 @@ begin
 
 memory_write: process(clock, Mem_W, M_inp, M_add)
     begin
-        if(clock' event and clock = '1') then
+        if(rising_edge(clock)) then
             if (Mem_W = '1') then
                 memory_storage(to_integer(unsigned(M_add))) <= M_inp;
             else 

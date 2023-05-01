@@ -49,7 +49,7 @@ entity IDRR is
           D_8_3_out: out std_logic_vector(5 downto 0);
           D_7_0_out: out std_logic_vector(7 downto 0);
           Mem1_D_out, PC_out, alu1_C_out : out std_logic_vector(15 downto 0);
-			 disable_wb: out std_logic; 
+			 disable_wb, rfa1_mux: out std_logic; 
           disable, clk, stall : in std_logic);
 end entity;
 
@@ -68,6 +68,11 @@ architecture simple of IDRR is
                 PC_out <= PC;
                 Mem1_D_out <= Mem1_D;
                 alu1_C_out <= alu1_C;
+					 if (opcode(3 downto 2)="01") then
+						rfa1_mux <= '1';
+					 else
+						rfa1_mux <= '0';
+					end if;
 				else
 					null;
             end if;
@@ -96,7 +101,11 @@ entity RREX is
           D_7_0_out: out std_logic_vector(7 downto 0);
           Mem1_D_out, PC_out, alu1_C_out, R0_data_out, RF_D1_out, RF_D2_out : out std_logic_vector(15 downto 0);
 			 disable_wb: out std_logic; 
-          disable, clk,stall : in std_logic);
+          disable, clk,stall : in std_logic;
+			 alu_select: out std_logic_vector(1 downto 0);
+			 alu4a_mux_control: out std_logic
+			 alu2a_pipeline_control: out std_logic;
+			 alu2b_pipeline_control: out std_logic_vector(1 downto 0));
 end entity;
 
 architecture simple of RREX is
@@ -117,9 +126,54 @@ architecture simple of RREX is
                 PC_out <= PC;
                 Mem1_D_out <= Mem1_D;
                 alu1_C_out <= alu1_C;
+					
+					if (opcode(3 downto 2) = "11") then
+						alu2a_pipeline_control <= '1';
+					else
+						alu2_a_pipeline_control <= '0';
+					end if;
+					
+					if (opcode(3 downto 0) = "0001") then
+						if (Mem1_D(2) = '0') then
+							alu2b_pipeline_control <= "00";
+						else
+							alu2b_pipeline_control <= "01";
+						end if;
+					elsif (opcode(3 downto 0) = "0010") then
+						if (Mem1_D(2) = '0') then
+							alu2b_pipeline_control <= "00";
+						else
+							alu2b_pipeline_control <= "01";
+						end if;
+					elsif (opcode(3 downto 2) = "10") then
+						alu2b_pipeline_control <= "00";
+					elsif (opcode(3 downto 0) = "0000" or opcode(3 downto 0) = "0011" or opcode(3 downto 0) = "0100") then
+						alu2b_pipeline_control <= "10";
+					elsif (opcode(3 downto 2) = "11") then
+						alu2b_pipeline_control <= "11";
+					else
+						null;
+					end if;
+					
+					if (opcode(3 downto 1)="000" or opcode(3 downto 2)="01") then
+						alu_select <= "00";
+					elsif (opcode(3 downto 0)="001") then
+						alu_select <= "01";
+					elsif (opcode(3 downto 2)="10") then
+						alu_select <= "11";
+					else null;
+					end if;
+					
+					if (opcode(3 downto 0)="1111") then
+						alu4a_mux_control <= '1';
+					else
+						alu4a_mux_control <= '0';
+					end if;
+				
 				else
 					null;
             end if;
+				
 				if (rising_edge(clk) and disable = '1') then
 					disable_wb <= disable;
 				else
@@ -129,7 +183,7 @@ architecture simple of RREX is
 end architecture simple;
 
 entity EXMA is 
-    port( Mem1_D, PC, alu1_C, R0_data, RF_D1,RF_D2,SE7_alu2_C : in std_logic_vector(15 downto 0); 
+    port( Mem1_D, PC, alu1_C, R0_data, RF_D1,RF_D2,SE7, alu2_C : in std_logic_vector(15 downto 0); 
           opcode: in std_logic_vector(3 downto 0);
           D_11_9, D_8_6 : in std_logic_vector(3 downto 0);
           D_5_0: in std_logic_vector(5 downto 0);

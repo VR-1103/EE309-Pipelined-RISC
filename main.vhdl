@@ -166,6 +166,11 @@ component alu3 is
 	Z: out std_logic);
 end component;
 
+component alu4 is
+	port(A, B: in std_logic_vector(15 downto 0);
+			X: out std_logic_vector(15 downto 0));
+end component;
+
 component compblock is
 	--This component produces complement of a 16 bit vector if the control bit is set
 	port (A: in std_logic_vector(15 downto 0);

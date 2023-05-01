@@ -33,3 +33,16 @@ stall_IDRR <= LHI_LW;
 disable_RREX <= LHI_LW;
 
 end architecture;
+
+entity hazard is
+	port(RREX_opcode, EXMA_opcode, MAWB_opcode: in std_logic_vector(3 downto 0);
+		  RREX_11_9, RREX_8_6, EXMA_11_9, EXMA_8_6, EXMA_5_3, MAWB_11_9, MAWB_8_6, MAWB_5_3: in std_logic_vector(2 downto 0);
+		  alu2_a_mux, alu2_b_mux: out std_logic_vector(2 downto 0);
+		  disable_ifid, disable_idrr, disable_rrex: out std_logic);
+end entity;
+
+architecture hazardous of hazard is
+
+begin
+
+end architecture;
