@@ -14,10 +14,10 @@ end entity;
 architecture hazardous of hazard_EX is
 signal jalr_jri_jal , beq,ble,blt : std_logic := '0';
 begin
-alu2a_mux <= "001" when(RREX_11_9 = EXMA_5_3 and (EXMA_opcode = "0001" or EXMA_opcode = "0010"));
-alu2a_mux <= "010" when(RREX_11_9 = MAWB_5_3 and (MAWB_opcode = "0001" or MAWB_opcode = "0010"));
-alu2a_mux <= "001" when(RREX_11_9 = EXMA_5_3 and (EXMA_opcode = "0001" or EXMA_opcode = "0010"));
-alu2a_mux <= "010" when(RREX_11_9 = MAWB_5_3 and (MAWB_opcode = "0001" or MAWB_opcode = "0010"));
+alu2a_haz_mux <= "01" when(RREX_11_9 = EXMA_5_3 and (EXMA_opcode = "0001" or EXMA_opcode = "0010"));
+alu2a_haz_mux <= "10" when(RREX_11_9 = MAWB_5_3 and (MAWB_opcode = "0001" or MAWB_opcode = "0010"));
+alu2b_haz_mux <= "01" when(RREX_8_6 = EXMA_5_3 and (EXMA_opcode = "0001" or EXMA_opcode = "0010"));
+alu2b_haz_mux <= "10" when(RREX_8_6 = MAWB_5_3 and (MAWB_opcode = "0001" or MAWB_opcode = "0010"));
 
 jalr_jri_jal <= '1' when(RREX_opcode = "1100" or "1101" or "1111") else '0'; -- basically when there is all unconditional jump statements jal,jlr,jri then disable if_id,id_rr,rr_ex in nxt clk cycle
 beq <= '1' when(RREX_opcode = "1000"  and (ex_flag = '01')) else '0';
