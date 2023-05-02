@@ -41,12 +41,12 @@ alu2a_haz_mux <= "001" when(((RREX_11_9 = EXMA_5_3 and (EXMA_opcode = "0001" or 
                  "010" when(((RREX_11_9 = MAWB_5_3 and (MAWB_opcode = "0001" or MAWB_opcode = "0010")) or ((RREX_11_9 = MAWB_8_6) and MAWB_opcode = "0000"))  and alu_nand_op) else
                  "011" when(RREX_11_9 = EXMA_11_9 and EXMA_opcode = "0011" and add_nand__load_op) else
                  "100" when(RREX_11_9 = MAWB_11_9 and MAWB_opcode = "0100" and add_nand__load_op) else
-                 "000"
+                 "000";
 alu2b_haz_mux <= "001" when(((RREX_8_6 = EXMA_5_3 and (EXMA_opcode = "0001" or EXMA_opcode = "0010")) or ((RREX_8_6 = EXMA_8_6) and EXMA_opcode = "0000")) and alu_nand_op) else;
                  "010" when(((RREX_8_6 = MAWB_5_3 and (MAWB_opcode = "0001" or MAWB_opcode = "0010")) or ((RREX_8_6 = MAWB_8_6) and MAWB_opcode = "0000")) and alu_nand_op) else
                  "011" when(RREX_8_6 = EXMA_11_9 and EXMA_opcode = "0011" and add_nand__load_op) else
                  "100" when(RREX_8_6 = MAWB_11_9 and MAWB_opcode = "0100" and add_nand__load_op) else
-                 "000"
+                 "000";
 
 
 jalr_jri_jal <= '1' when(RREX_opcode = "1100" or "1101" or "1111") else '0'; -- basically when there is all unconditional jump statements jal,jlr,jri then disable if_id,id_rr,rr_ex in nxt clk cycle
