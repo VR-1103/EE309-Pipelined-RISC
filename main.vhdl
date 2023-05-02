@@ -36,7 +36,7 @@ component IDRR is
           D_11_9, D_8_6 : in std_logic_vector(3 downto 0);
           D_5_0: in std_logic_vector(5 downto 0);
           D_8_0: in std_logic_vector(8 downto 0);
-          D_8_3: in std_logic_vector(5 downto 0);
+          D_5_3: in std_logic_vector(5 downto 0);
           D_7_0: in std_logic_vector(7 downto 0);
 
           opcode_out: out std_logic_vector(3 downto 0);
@@ -76,7 +76,7 @@ component RREX is
 end component;
 
 component EXMA is 
-    port( Mem1_D, PC, alu1_C, RF_D1,RF_D2,SE7, alu2_X : in std_logic_vector(15 downto 0); 
+    port( Mem1_D, PC, alu1_C, RF_D1,RF_D2,SE7, alu2_X, alu3_X : in std_logic_vector(15 downto 0); 
           opcode: in std_logic_vector(3 downto 0);
           D_11_9, D_8_6 : in std_logic_vector(2 downto 0);
           D_5_0: in std_logic_vector(5 downto 0);
@@ -90,14 +90,14 @@ component EXMA is
           D_8_0_out: out std_logic_vector(8 downto 0);
           D_5_3_out: out std_logic_vector(2 downto 0);
           D_7_0_out: out std_logic_vector(7 downto 0);
-          Mem1_D_out, PC_out, alu1_C_out, RF_D1_out, RF_D2_out, SE7_out, alu2_X_out : out std_logic_vector(15 downto 0); 
+          Mem1_D_out, PC_out, alu1_C_out, RF_D1_out, RF_D2_out, SE7_out, alu2_X_out, alu3_X_out : out std_logic_vector(15 downto 0); 
           disable_wb,M_write : out std_logic;
 			 flags_out: out std_logic_vector(1 downto 0);
 			 disable, clk, alu2_C, alu2_Z: in std_logic);
 end component;
 
 component MAWB is 
-    port( Mem1_D, PC, alu1_C, RF_D1,RF_D2, Mem2_D, SE7, alu2_X : in std_logic_vector(15 downto 0); 
+    port( Mem1_D, PC, alu1_C, RF_D1,RF_D2, Mem2_D, SE7, alu2_X, alu3_X : in std_logic_vector(15 downto 0); 
           opcode: in std_logic_vector(3 downto 0);
           D_11_9, D_8_6 : in std_logic_vector(2 downto 0);
           D_5_0: in std_logic_vector(5 downto 0);
@@ -111,7 +111,7 @@ component MAWB is
           D_8_0_out: out std_logic_vector(8 downto 0);
           D_5_3_out: out std_logic_vector(2 downto 0);
           D_7_0_out: out std_logic_vector(7 downto 0);
-          Mem1_D_out, PC_out, alu1_C_out, RF_D1_out, RF_D2_out, Mem2_D_out, SE7_out, alu2_X_out : out std_logic_vector(15 downto 0); 
+          Mem1_D_out, PC_out, alu1_C_out, RF_D1_out, RF_D2_out, Mem2_D_out, SE7_out, alu2_X_out, alu3_X_out : out std_logic_vector(15 downto 0); 
           disable, clk: in std_logic;
 			 flags: in std_logic_vector(1 downto 0);
 			 rf_w_enable,disable_out: out std_logic;
@@ -233,19 +233,21 @@ end component;
 			disable_exma_hazard,disabled,stall_ifid,stall_idrr,stall_rrex,
 			rfa1_mux_control,alu4a_mux_control,alu2a_control,c_flag,z_flag,mem_enable: std_logic;
  
- signal pc_mux_control,alu2_select,flags_mawb,flags_wb,rfd3_mux_control,rfa3_mux_control,alu2b_control: std_logic_vector(1 downto 0);
+ signal pc_mux_control: std_logic_vector(2 downto 0);
+ 
+ signal alu2_select,flags_mawb,flags_wb,rfd3_mux_control,rfa3_mux_control,alu2b_control: std_logic_vector(1 downto 0);
  
  signal decoder_opcode,opcode_idrr,opcode_rrex,opcode_exma,opcode_mawb: std_logic_vector(3 downto 0);
  
- signal decoder_11_9,idrr_11_9,decoder_8_6,idrr_8_6,decoder_5_3,idrr_5_3,rrex_11_9,rrex_8_6,rrex_5_0,
-			rrex_8_0,rrex_5_3,rrex_7_0,exma_11_9,exma_8_6,exma_5_0,exma_8_0,exma_5_3,exma_7_0,mawb_11_9,mawb_8_6,
-      mawb_5_0,mawb_8_0,mawb_5_3,mawb_7_0,rfa1_in,rfa3_in,alu2a_hazard_control,alu2b_hazard_control: std_logic_vector(2 downto 0);
+ signal decoder_11_9,idrr_11_9,decoder_8_6,idrr_8_6,decoder_5_3,idrr_5_3,rrex_11_9,rrex_8_6,
+			rrex_5_3,exma_11_9,exma_8_6,exma_5_3,mawb_11_9,mawb_8_6,
+      mawb_5_3,rfa1_in,rfa3_in,alu2a_hazard_control,alu2b_hazard_control: std_logic_vector(2 downto 0) := "000";
  
- signal decoder_5_0,idrr_5_0: std_logic_vector(5 downto 0);
+ signal decoder_5_0,idrr_5_0,rrex_5_0,exma_5_0,mawb_5_0: std_logic_vector(5 downto 0);
  
- signal decoder_8_0,idrr_8_0: std_logic_vector(8 downto 0);
+ signal decoder_8_0,idrr_8_0,rrex_8_0,exma_8_0,mawb_8_0: std_logic_vector(8 downto 0);
  
- signal decoder_7_0,idrr_7_0: std_logic_vector(7 downto 0);
+ signal decoder_7_0,idrr_7_0,rrex_7_0,exma_7_0,mawb_7_0: std_logic_vector(7 downto 0);
 
 begin 
  

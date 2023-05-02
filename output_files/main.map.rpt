@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main
-Tue May 02 21:44:54 2023
+Tue May 02 22:10:17 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Tue May 02 21:44:54 2023           ;
+; Analysis & Synthesis Status        ; Failed - Tue May 02 22:10:17 2023           ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; main                                        ;
 ; Top-level Entity Name              ; processor                                   ;
@@ -164,7 +164,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue May 02 21:44:38 2023
+    Info: Processing started: Tue May 02 22:10:01 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pipelined_risc -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -263,19 +263,32 @@ Info (12021): Found 2 design units, including 1 entities, in source file main.vh
 Info (12021): Found 2 design units, including 1 entities, in source file alu4.vhdl
     Info (12022): Found design unit 1: alu4-Struct File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu4.vhdl Line: 9
     Info (12023): Found entity 1: alu4 File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu4.vhdl Line: 4
-Error (10476): VHDL error at main.vhdl(326): type of identifier "alu2x_exma" does not agree with its usage as "std_logic" type File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 326
-Error (10558): VHDL error at main.vhdl(326): cannot associate formal port "disable_wb" of mode "out" with an expression File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 326
-Error (10476): VHDL error at main.vhdl(326): type of identifier "alu3x_exma" does not agree with its usage as "std_logic" type File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 326
-Error (10558): VHDL error at main.vhdl(326): cannot associate formal port "M_write" of mode "out" with an expression File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 326
-Error (10476): VHDL error at main.vhdl(326): type of identifier "disable_mawb" does not agree with its usage as "std_logic_vector" type File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 326
-Error (10558): VHDL error at main.vhdl(326): cannot associate formal port "flags_out" of mode "out" with an expression File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 326
-Error (10476): VHDL error at main.vhdl(326): type of identifier "flags_mawb" does not agree with its usage as "std_logic" type File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 326
-Error (10589): VHDL Port Map Aspect error at main.vhdl(323): too many actuals for block "EXMA" with only 35 formals File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 323
-Error (10784): HDL error at main.vhdl(78): see declaration for object "EXMA" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 78
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 9 errors, 1 warning
-    Error: Peak virtual memory: 4772 megabytes
-    Error: Processing ended: Tue May 02 21:44:54 2023
+Info (12127): Elaborating entity "processor" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at main.vhdl(225): object "pc_out_mawb" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 225
+Warning (10541): VHDL Signal Declaration warning at main.vhdl(225): used implicit default value for signal "mem1_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 225
+Warning (10036): Verilog HDL or VHDL warning at main.vhdl(227): object "alu1x_mawb" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 227
+Warning (10036): Verilog HDL or VHDL warning at main.vhdl(227): object "rfd1_mawb" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 227
+Warning (10036): Verilog HDL or VHDL warning at main.vhdl(227): object "rfd2_mawb" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 227
+Warning (10541): VHDL Signal Declaration warning at main.vhdl(225): used implicit default value for signal "alu2a_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 225
+Warning (10541): VHDL Signal Declaration warning at main.vhdl(225): used implicit default value for signal "alu2b_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 225
+Warning (10541): VHDL Signal Declaration warning at main.vhdl(231): used implicit default value for signal "stall_ifid" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 231
+Warning (10541): VHDL Signal Declaration warning at main.vhdl(231): used implicit default value for signal "stall_idrr" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 231
+Warning (10541): VHDL Signal Declaration warning at main.vhdl(231): used implicit default value for signal "stall_rrex" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 231
+Warning (10036): Verilog HDL or VHDL warning at main.vhdl(238): object "flags_wb" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 238
+Warning (10036): Verilog HDL or VHDL warning at main.vhdl(246): object "mawb_5_0" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 246
+Warning (10036): Verilog HDL or VHDL warning at main.vhdl(248): object "mawb_8_0" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 248
+Warning (10036): Verilog HDL or VHDL warning at main.vhdl(250): object "mawb_7_0" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 250
+Error (10344): VHDL expression error at main.vhdl(276): expression has 3 elements, but must have 4 elements File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 276
+Error (10344): VHDL expression error at main.vhdl(277): expression has 3 elements, but must have 4 elements File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 277
+Error (10344): VHDL expression error at main.vhdl(277): expression has 3 elements, but must have 6 elements File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 277
+Error (10346): VHDL error at main.vhdl(276): formal port or parameter "D_11_9" must have actual or default value File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 276
+Error (10346): VHDL error at main.vhdl(276): formal port or parameter "D_8_6" must have actual or default value File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 276
+Error (10346): VHDL error at main.vhdl(276): formal port or parameter "D_5_3" must have actual or default value File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 276
+Error (12153): Can't elaborate top-level user hierarchy
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 7 errors, 15 warnings
+    Error: Peak virtual memory: 4778 megabytes
+    Error: Processing ended: Tue May 02 22:10:17 2023
     Error: Elapsed time: 00:00:16
-    Error: Total CPU time (on all processors): 00:00:25
+    Error: Total CPU time (on all processors): 00:00:26
 
 
