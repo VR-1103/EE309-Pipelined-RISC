@@ -8,7 +8,7 @@ entity MUX_2x1_16BIT is
   end entity MUX_2x1_16BIT ;
 
 
-architecture Struct of MUX_1X2_16BIT is
+architecture Struct of MUX_2X1_16BIT is
 
  component MUX_2x1_4BIT is 
 port (I0,I1 : in std_logic_vector(3 downto 0); Sel : in std_logic ; Y : out std_logic_vector(3 downto 0));

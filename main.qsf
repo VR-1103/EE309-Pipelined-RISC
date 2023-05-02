@@ -58,15 +58,13 @@ set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name FLOW_ENABLE_POWER_ANALYZER ON
 set_global_assignment -name POWER_DEFAULT_INPUT_IO_TOGGLE_RATE "12.5 %"
-set_global_assignment -name VHDL_FILE hazard_updated.vhdl
-set_global_assignment -name VHDL_FILE hazard.vhdl
+set_global_assignment -name VHDL_FILE hazard_1.vhdl
 set_global_assignment -name VHDL_FILE MUX4to1.vhdl
 set_global_assignment -name VHDL_FILE MUX_8X1_16BIT.vhdl
 set_global_assignment -name VHDL_FILE MUX_8X1_4BIT.VHDL
 set_global_assignment -name VHDL_FILE MUX_8X1_1bit.vhdl
 set_global_assignment -name VHDL_FILE MUX_4X1_16BIT.VHDL
 set_global_assignment -name VHDL_FILE MUX_4X1_4BIT.vhdl
-set_global_assignment -name VHDL_FILE hazard_package.vhdl
 set_global_assignment -name VHDL_FILE Register_file.vhdl
 set_global_assignment -name VHDL_FILE pipeline_regs.vhdl
 set_global_assignment -name VHDL_FILE MUX_2x1_16Bit.vhdl
@@ -82,6 +80,9 @@ set_global_assignment -name VHDL_FILE Gates.vhdl
 set_global_assignment -name VHDL_FILE alu1.vhdl
 set_global_assignment -name VHDL_FILE alu2.vhdl
 set_global_assignment -name VHDL_FILE alu3.vhdl
-set_global_assignment -name VHDL_FILE lmsm_block.vhdl
 set_global_assignment -name VHDL_FILE main.vhdl
 set_global_assignment -name VHDL_FILE alu4.vhdl
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

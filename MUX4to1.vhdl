@@ -4,7 +4,7 @@ library work;
 use work.Gates.all;
 
 entity MUX_4_1  is
-  port ( S:in_std_logic_vector(1 downto 0) ; I: in std_logic_vector(3 downto 0); Y: out std_logic);
+  port ( S:in std_logic_vector(1 downto 0) ; I: in std_logic_vector(3 downto 0); Y: out std_logic);
 end entity MUX_4_1;
 
 architecture Struct of MUX_4_1 is

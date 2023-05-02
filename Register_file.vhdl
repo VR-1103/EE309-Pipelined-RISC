@@ -1,6 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-USE IEEE.numeric_std.all
+USE IEEE.numeric_std.all;
 
 entity register_file is 
 -- PC is R0 so incorporating it in register file itself

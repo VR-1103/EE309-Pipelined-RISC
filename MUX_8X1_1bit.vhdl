@@ -4,7 +4,7 @@ library work;
 use work.Gates.all;
 
 entity MUX_8x1 is 
-  port (I: in_std_logic_vector(7 downto 0),S: in std_logic_vector(2 downto 0); Y_out : out std_logic);
+  port (I: in std_logic_vector(7 downto 0); S: in std_logic_vector(2 downto 0); Y_out : out std_logic);
   end entity MUX_8x1 ;
 
 
@@ -15,7 +15,7 @@ architecture Struct of MUX_8X1 is
 end component MUX_2_1;
 
 component MUX_4_1  is
- port ( S:in_std_logic_vector(1 downto 0) ; I: in std_logic_vector(3 downto 0); Y: out std_logic);
+ port ( S:in std_logic_vector(1 downto 0) ; I: in std_logic_vector(3 downto 0); Y: out std_logic);
 end component MUX_4_1;
 
   signal y_1,y_0 : std_logic;

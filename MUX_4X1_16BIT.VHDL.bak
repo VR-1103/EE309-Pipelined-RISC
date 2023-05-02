@@ -1,0 +1,36 @@
+Library ieee;
+use ieee.std_logic_1164.all;
+library work;
+use work.Gates.all;
+
+entity MUX_4x1_16BIT is 
+  port (I3,I2,I1,I0 : in std_logic_vector(15 downto 0); S: in std_logic(1 downto 0); Y : out std_logic_vector(15 downto 0));
+  end entity MUX_4x1_16BIT ;
+
+
+architecture Struct of MUX_4x1_16BIT is
+
+component MUX_4X1_4BIT is 
+ port (I3,I2,I1,I0:in_std_logic_vector(3 downto 0) ; S: in std_logic(1 downto 0) ; Y : out std_logic_vector(3 downto 0));
+  end component MUX_4X1_4BIT ;
+
+
+  --signal y_1,y_0 : std_logic;
+  
+  begin 
+   M1 : MUX_4X1_4BIT port map (I3 =>I3(15 downto 12), I2=>I2(15 downto 12), I1=>I1(15 downto 12), I0=>I0(15 downto 12),
+                               S(1)=>S(1),S(0)=>S(0),Y=>Y(15 downto 12));
+	
+   M2 : MUX_4X1_4BIT port map (I3 =>I3(11 downto 8), I2=>I2(11 downto 8), I1=>I1(11 downto 8), I0=>I0(11 downto 8),
+                               S(1)=>S(1),S(0)=>S(0),Y=>Y(11 downto 8));
+	  
+  M3 : MUX_4X1_4BIT port map (I3 =>I3(7 downto 4), I2=>I2(7 downto 4), I1=>I1(7 downto 4), I0=>I0(7 downto 4),
+                               S(1)=>S(1),S(0)=>S(0),Y=>Y(7 downto 4));
+	
+  M4 : MUX_4X1_4BIT port map (I3 =>I3(3 downto 0), I2=>I2(3 downto 0), I1=>I1(3 downto 0), I0=>I0(3 downto 0),
+                               S(1)=>S(1),S(0)=>S(0),Y=>Y(3 downto 0));
+	
+   
+ 
+  
+end Struct;

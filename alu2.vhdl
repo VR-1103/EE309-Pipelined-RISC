@@ -49,7 +49,7 @@ architecture execute of alu2 is
 				else 
 					Z<='0';
 				end if;
-			elsif sel="01"
+			elsif sel="01" then
 				X<= A nand B;
 				C<='0';
 				if (A nand B)="0000000000000000" then
