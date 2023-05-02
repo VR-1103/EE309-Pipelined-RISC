@@ -15,9 +15,22 @@ architecture behav of lmsm_block is
 	begin
 		if input(0) = '1' then
 			lmsm_a <= temp;
-			for i in range(2 downto 0) loop
-				---- TODO: reduce temp by 1;
-			end loop;
+			if (temp = "111") then
+				temp := "110";
+			elsif (temp = "110") then
+				temp := "101";
+			elsif (temp = "101") then
+				temp := "100";
+			elsif (temp = "100") then
+				temp := "011";
+			elsif (temp = "011") then
+				temp := "010";
+			elsif (temp = "010") then
+				temp := "001";
+			elsif (temp = "001") then
+				temp := "000";
+			else null;
+			end if;
 			lmsm_out <= input>>1;
 		else
 			lmsm_out <= input>>1;
