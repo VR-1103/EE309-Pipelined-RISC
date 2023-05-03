@@ -18,8 +18,8 @@ architecture behav of register_file is
 
 -- defining RF as an array of 8 regs storing 16 bit data
 type reg_array_type is array (7 downto 0) of std_logic_vector(15 downto 0);
-signal registers : reg_array_type := (0 => "0000000000000001",1 => "0000000000000010",2 => "0000000000000011",3 => "0000000000000100",
-4 => "0000000000000101",5 => "0000000000000110",6 => "0000000000000111",7 => "0000000000000000", others => "0000000000000000");
+signal registers : reg_array_type := (0 => "0000000000000000",1 => "0000000000000010",2 => "0000000000000010",3 => "0000000000000100",
+4 => "0000000000000101",5 => "0000000000000110",6 => "0000000000000111",7 => "0000000000111000");
 
 
 begin 

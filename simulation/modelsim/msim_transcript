@@ -1,0 +1,435 @@
+# Reading pref.tcl
+# do main_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/hazard_1.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:52:35 on May 03,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/hazard_1.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity hazard_EX
+# -- Compiling architecture hazardous of hazard_EX
+# End time: 17:52:35 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/Register_file.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:52:36 on May 03,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/Register_file.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity register_file
+# -- Compiling architecture behav of register_file
+# End time: 17:52:36 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/pipeline_regs.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:52:36 on May 03,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/pipeline_regs.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity IFID
+# -- Compiling architecture simple of IFID
+# -- Compiling entity IDRR
+# -- Compiling architecture simple of IDRR
+# -- Compiling entity RREX
+# -- Compiling architecture simple of RREX
+# -- Compiling entity EXMA
+# -- Compiling architecture simple of EXMA
+# -- Compiling entity MAWB
+# -- Compiling architecture simple of MAWB
+# End time: 17:52:36 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/se10.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:52:36 on May 03,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/se10.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity se10
+# -- Compiling architecture bhv of se10
+# End time: 17:52:36 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/se7.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:52:36 on May 03,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/se7.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity se7
+# -- Compiling architecture bhv of se7
+# End time: 17:52:36 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/memsplit.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:52:36 on May 03,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/memsplit.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity memsplit
+# -- Compiling architecture bhv of memsplit
+# End time: 17:52:36 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/instrmem.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:52:36 on May 03,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/instrmem.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity instrmem
+# -- Compiling architecture behav of instrmem
+# End time: 17:52:36 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/datamem.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:52:36 on May 03,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/datamem.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity datamem
+# -- Compiling architecture behav of datamem
+# End time: 17:52:37 on May 03,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/compblock.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:52:37 on May 03,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/compblock.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity compblock
+# -- Compiling architecture bhv of compblock
+# End time: 17:52:37 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/Gates.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:52:37 on May 03,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/Gates.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package Gates
+# -- Compiling entity INVERTER
+# -- Compiling architecture Equations of INVERTER
+# -- Compiling entity AND_2
+# -- Compiling architecture Equations of AND_2
+# -- Compiling entity NAND_2
+# -- Compiling architecture Equations of NAND_2
+# -- Compiling entity OR_2
+# -- Compiling architecture Equations of OR_2
+# -- Compiling entity NOR_2
+# -- Compiling architecture Equations of NOR_2
+# -- Compiling entity XOR_2
+# -- Compiling architecture Equations of XOR_2
+# -- Compiling entity XNOR_2
+# -- Compiling architecture Equations of XNOR_2
+# -- Compiling entity HALF_ADDER
+# -- Compiling architecture Equations of HALF_ADDER
+# End time: 17:52:37 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu1.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:52:37 on May 03,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu1.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu1
+# -- Compiling architecture pc of alu1
+# End time: 17:52:37 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:52:37 on May 03,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu2
+# -- Compiling architecture execute of alu2
+# End time: 17:52:37 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu3.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:52:37 on May 03,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu3.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu3
+# -- Compiling architecture add_with_carry of alu3
+# End time: 17:52:37 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu4.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:52:37 on May 03,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu4.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu4
+# -- Compiling architecture Struct of alu4
+# End time: 17:52:37 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/DUT.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:52:37 on May 03,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/DUT.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DUT
+# -- Compiling architecture DutWrap of DUT
+# End time: 17:52:37 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX4to1.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:52:37 on May 03,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX4to1.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package Gates
+# -- Compiling entity MUX_4_1
+# -- Compiling architecture Struct of MUX_4_1
+# End time: 17:52:37 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_16BIT.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:52:37 on May 03,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_16BIT.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package Gates
+# -- Compiling entity MUX_8X1_16BIT
+# -- Compiling architecture Struct of MUX_8X1_16BIT
+# End time: 17:52:37 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:52:37 on May 03,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package Gates
+# -- Compiling entity MUX_8X1_4BIT
+# -- Compiling architecture Struct of MUX_8X1_4BIT
+# End time: 17:52:38 on May 03,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_1bit.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:52:38 on May 03,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_1bit.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package Gates
+# -- Compiling entity MUX_8x1
+# -- Compiling architecture Struct of MUX_8X1
+# End time: 17:52:38 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_4X1_16BIT.VHDL}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:52:38 on May 03,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_4X1_16BIT.VHDL 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package Gates
+# -- Compiling entity MUX_4x1_16BIT
+# -- Compiling architecture Struct of MUX_4x1_16BIT
+# End time: 17:52:38 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_4X1_4BIT.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:52:38 on May 03,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_4X1_4BIT.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package Gates
+# -- Compiling entity MUX_4X1_4BIT
+# -- Compiling architecture Struct of MUX_4X1_4BIT
+# End time: 17:52:38 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_2x1_16Bit.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:52:38 on May 03,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_2x1_16Bit.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package Gates
+# -- Compiling entity MUX_2x1_16BIT
+# -- Compiling architecture Struct of MUX_2X1_16BIT
+# End time: 17:52:38 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_2x1_4bit.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:52:38 on May 03,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_2x1_4bit.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package Gates
+# -- Compiling entity MUX_2X1_4BIT
+# -- Compiling architecture Struct of MUX_2X1_4BIT
+# End time: 17:52:38 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX _2X1_1Bit.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:52:38 on May 03,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX _2X1_1Bit.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package Gates
+# -- Compiling entity MUX_2_1
+# -- Compiling architecture Struct of MUX_2_1
+# End time: 17:52:38 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:52:38 on May 03,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading package Gates
+# -- Compiling entity processor
+# -- Compiling architecture pipelined of processor
+# End time: 17:52:38 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_2x1_3bit.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:52:38 on May 03,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_2x1_3bit.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package Gates
+# -- Compiling entity MUX_2X1_3BIT
+# -- Compiling architecture Struct of MUX_2X1_3BIT
+# End time: 17:52:38 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_4x1_3bit.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:52:38 on May 03,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_4x1_3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package Gates
+# -- Compiling entity MUX_4X1_3BIT
+# -- Compiling architecture Struct of MUX_4X1_3BIT
+# End time: 17:52:38 on May 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.dut
+# vsim work.dut 
+# Start time: 17:52:44 on May 03,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.dut(dutwrap)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.gates
+# Loading work.processor(pipelined)
+# Loading work.register_file(behav)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.instrmem(behav)
+# Loading work.alu1(pc)
+# Loading work.mux_8x1_16bit(struct)
+# Loading work.mux_8x1_4bit(struct)
+# Loading work.mux_8x1(struct)
+# Loading work.mux_4_1(struct)
+# Loading work.mux_2_1(struct)
+# Loading work.inverter(equations)
+# Loading work.and_2(equations)
+# Loading work.or_2(equations)
+# Loading work.ifid(simple)
+# Loading work.memsplit(bhv)
+# Loading work.idrr(simple)
+# Loading work.mux_2x1_3bit(struct)
+# Loading work.rrex(simple)
+# Loading work.se10(bhv)
+# Loading work.se7(bhv)
+# Loading work.mux_2x1_16bit(struct)
+# Loading work.mux_2x1_4bit(struct)
+# Loading work.mux_4x1_16bit(struct)
+# Loading work.mux_4x1_4bit(struct)
+# Loading work.compblock(bhv)
+# Loading work.alu2(execute)
+# Loading work.alu3(add_with_carry)
+# Loading work.alu4(struct)
+# Loading work.exma(simple)
+# Loading work.hazard_ex(hazardous)
+# Loading work.datamem(behav)
+# Loading work.mawb(simple)
+# Loading work.mux_4x1_3bit(struct)
+# ** Warning: Design size of 37594 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# ** Warning: (vsim-8683) Uninitialized out port /dut/add_instance/mawb_pipeline_register/disable_out has no driver.
+# This port will contribute value (U) to the signal network.
+add wave -position end  sim:/dut/input_vector(1)
+add wave -position end sim:/dut/add_instance/alu_2/*
+force -freeze sim:/dut/input_vector(1) 1 0, 0 {50 ps} -r 100
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dut/add_instance/mem2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dut/add_instance/mem2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dut/add_instance/mem1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dut/add_instance/rf
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dut/add_instance/rf
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 1  Instance: /dut/add_instance/rf
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ps  Iteration: 1  Instance: /dut/add_instance/rf
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 200 ps  Iteration: 1  Instance: /dut/add_instance/rf
+run
+run
+run
+run
+run
+run
+# End time: 18:00:22 on May 03,2023, Elapsed time: 0:07:38
+# Errors: 0, Warnings: 10

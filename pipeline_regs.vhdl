@@ -162,17 +162,17 @@ architecture simple of RREX is
 						null;
 					end if;
 					
-					if (opcode(3 downto 1)="000" or opcode(3 downto 2)="01") then
+					if (opcode(3 downto 1)="000" or opcode(3 downto 2)="01" or opcode(3 downto 1) = "110") then
 						alu_select <= "00";
                         if (opcode = "0001" and ((Mem1_D(0) = '1' and z_prev = '0') or (Mem1_D(1) = '1' and c_prev = '0'))) then
                             alu_will_disable := '1';
-								else null;
+								else alu_will_disable := '0';
 								end if;
 					elsif (opcode="0010") then
 						alu_select <= "01";
                         if ((Mem1_D(0) = '1' and z_prev = '0') or (Mem1_D(1) = '1' and c_prev = '0')) then
                             alu_will_disable := '1';
-								else null;
+								else alu_will_disable := '0';
 								end if;
 					elsif (opcode(3 downto 2)="10") then
 						alu_select <= "11";
@@ -188,7 +188,7 @@ architecture simple of RREX is
 					if (disable = '1') then
 						disable_wb <= disable;
 					 else
-						disable_wb <= '0';
+						disable_wb <= alu_will_disable;
 					 end if;
 				
 				else

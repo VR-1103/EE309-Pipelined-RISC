@@ -1,7 +1,7 @@
-Analysis & Synthesis Status : Successful - Wed May 03 10:40:27 2023
+Analysis & Synthesis Status : Successful - Wed May 03 17:52:17 2023
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : main
-Top-level Entity Name : processor
+Top-level Entity Name : DUT
 Family : MAX 10
 Total logic elements : 0
     Total combinational functions : 0

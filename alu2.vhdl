@@ -36,8 +36,6 @@ architecture execute of alu2 is
 	begin
 	alu_proc: process(A,B,sel)
 	variable temp: std_logic_vector(16 downto 0);
-	variable tempa: std_logic_vector(15 downto 0);
-	variable tempb: std_logic_vector(15 downto 0);
 	begin
 		if (disable = '0') then
 			if sel="00" then
@@ -57,19 +55,18 @@ architecture execute of alu2 is
 				else 
 					Z<='0';
 				end if;
-			else
-				tempa := A;
-				tempb := B;
-				if (tempa = tempb) then
+			elsif sel="11" then
+				if (A = B) then
 					C<='0';
 					Z<='1';
-				elsif (tempa < tempb) then
+				elsif (A < B) then
 					C<='1';
 					Z<='0';
 				else
 					C<='0';
 					Z<='0';
 				end if;
+			else null;
 			end if;
 		else null;
 		end if;

@@ -45,7 +45,7 @@ alu2a_mux_temp <= "001" when(((RREX_11_9 = EXMA_5_3 and (EXMA_opcode = "0001" or
                             or ((RREX_11_9 = MAWB_8_6) and MAWB_opcode = "0000"))  and add_nand_load_op = '1') else
                  "011" when(RREX_11_9 = EXMA_11_9 and EXMA_opcode = "0011" and add_nand_load_op = '1') else
                  "100" when(RREX_11_9 = MAWB_11_9 and MAWB_opcode = "0011" and add_nand_load_op = '1') else
-                 "101" when(RREX_8_6 = MAWB_11_9 and MAWB_opcode = "0100" and add_nand_load_op = '1') else
+                 "101" when(RREX_8_6 = EXMA_11_9 and EXMA_opcode = "0100" and add_nand_load_op = '1') else
                  "110" when((RREX_11_9 = EXMA_5_3 and (EXMA_opcode = "0001" or EXMA_opcode = "0010") and (EXMA_2_0 = "011" or EXMA_2_0 ="111")) 
                             and add_nand_load_op = '1') else
                  "111" when((RREX_11_9 = MAWB_5_3 and (MAWB_opcode = "0001" or MAWB_opcode = "0010") and (MAWB_2_0 = "011" or MAWB_2_0 = "111")) 
@@ -70,9 +70,9 @@ beq <= '1' when(RREX_opcode = "1000"  and (alu2_flags = "01") and (RREX_state_di
 blt <= '1' when(RREX_opcode = "1000"  and (alu2_flags = "10") and (RREX_state_disable = '0')) else '0';
 ble <= '1' when(RREX_opcode = "1001"  and (alu2_flags = "10" or alu2_flags = "11") and (RREX_state_disable = '0')) else '0';  -- correct vedika's alu
 
-disable_IFID <= '1'  when(jalr_jri_jal='1' or beq='1' or ble='1' or blt='1' or (pc_mux_temp = "001" or pc_mux_temp = "010" or pc_mux_temp = "011" or pc_mux_temp = "100" or pc_mux_temp = "101"));
-disable_IDRR <= '1' when (jalr_jri_jal='1' or beq='1' or ble='1' or blt='1' or (PC_mux_temp = "001" or PC_mux_temp = "010" or PC_mux_temp = "011" or PC_mux_temp = "100" or pc_mux_temp ="101"));
-disable_RREX <= '1' when (jalr_jri_jal = '1' or beq = '1' or ble = '1' or blt = '1' or (PC_mux_temp = "001" or PC_mux_temp = "010" or PC_mux_temp = "011" or PC_mux_temp = "100" or PC_mux_temp ="101"));
-disable_EXMA <= '1' when (PC_mux_temp = "100");
+disable_IFID <= '1'  when(jalr_jri_jal='1' or beq='1' or ble='1' or blt='1' or (pc_mux_temp = "001" or pc_mux_temp = "010" or pc_mux_temp = "011" or pc_mux_temp = "100" or pc_mux_temp = "101")) else '0';
+disable_IDRR <= '1' when (jalr_jri_jal='1' or beq='1' or ble='1' or blt='1' or (PC_mux_temp = "001" or PC_mux_temp = "010" or PC_mux_temp = "011" or PC_mux_temp = "100" or pc_mux_temp ="101")) else '0';
+disable_RREX <= '1' when (jalr_jri_jal = '1' or beq = '1' or ble = '1' or blt = '1' or (PC_mux_temp = "001" or PC_mux_temp = "010" or PC_mux_temp = "011" or PC_mux_temp = "100" or PC_mux_temp ="101")) else '0';
+disable_EXMA <= '1' when (PC_mux_temp = "100") else '0';
  -- need to make rf_w, mem2_w, flag_w =0
 end architecture;

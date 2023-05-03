@@ -230,7 +230,7 @@ end component;
  
  -- Initializing the required signals
  
- signal pc_in,pc_out,pc_out_ifid,pc_out_idrr,pc_out_rrex,pc_out_exma,pc_out_mawb,mem1_in,mem1_out,mem1_out_ifid,
+ signal pc_in,pc_out,pc_out_ifid,pc_out_idrr,pc_out_rrex,pc_out_exma,pc_out_mawb,mem1_out,mem1_out_ifid,
 			mem1_out_idrr,mem1_out_rrex,mem1_out_exma,mem1_out_mawb,alu1x,alu1x_ifid,alu1x_idrr,alu1x_rrex,alu1x_exma,
 			alu1x_mawb,decoder_in,rfd1,rfd2,rfd3_in,se10_out,se7_out,rfd1_rrex,rfd2_rrex,rfd1_exma,rfd2_exma,rfd1_mawb,rfd2_mawb,
       cb_out,alu2a_in,alu2b_in,alu2x,alu2x_exma,alu2x_mawb,alu2a_pipeline,alu2b_pipeline,alu3x,alu3x_exma,alu3x_mawb,alu4a_in,alu4x,se7_exma,
@@ -239,11 +239,11 @@ end component;
  signal rf_write,disable_ifid,disable_idrr,disable_rrex,disable_exma,disable_mawb,disable_idrr_forward,
 			disable_rrex_forward,disable_exma_forward,disable_idrr_hazard,disable_rrex_hazard,
 			disable_exma_hazard,disabled,stall_ifid,stall_idrr,stall_rrex,
-			rfa1_mux_control,alu4a_mux_control,alu2a_control,c_flag,z_flag,mem_enable: std_logic;
+			rfa1_mux_control,alu4a_mux_control,alu2a_control,c_flag,z_flag,mem_enable: std_logic := '0';
  
- signal pc_mux_control: std_logic_vector(2 downto 0);
+ signal pc_mux_control: std_logic_vector(2 downto 0) := "000";
  
- signal alu2_select,flags_mawb,flags_wb,rfd3_mux_control,rfa3_mux_control,alu2b_control: std_logic_vector(1 downto 0);
+ signal alu2_select,flags_mawb,flags_wb,rfd3_mux_control,rfa3_mux_control,alu2b_control: std_logic_vector(1 downto 0) := "00";
  
  signal decoder_opcode,opcode_idrr,opcode_rrex,opcode_exma,opcode_mawb: std_logic_vector(3 downto 0);
  
@@ -265,7 +265,7 @@ begin
  
  rf: register_file port map(clk,reset,'1',rf_write,rfa1_in,idrr_8_6,rfa3_in,rfd3_in,pc_in,rfd1,rfd2,pc_out);
  
- mem1: instrmem port map(mem1_in,mem1_out);
+ mem1: instrmem port map(pc_out,mem1_out);
  
  alu_1: alu1 port map(pc_out,"0000000000000001",alu1x);
  
@@ -274,7 +274,7 @@ begin
  
  ifid_pipeline_register: IFID port map(mem1_out,pc_out,alu1x,mem1_out_ifid,pc_out_ifid,alu1x_ifid,disable_idrr_forward,disable_ifid,clk,stall_ifid);
  
- disable_idrr <=  '0' when (disable_idrr_forward = '0' and disable_idrr_hazard = '0') else '1';
+ disable_idrr <=  '1' when (disable_idrr_forward = '1' or disable_idrr_hazard = '1') else '0';
  -----
  --Instruction Decode Stage
  -----
@@ -286,7 +286,7 @@ begin
 												idrr_8_6,idrr_5_0,idrr_8_0,idrr_5_3,idrr_7_0,mem1_out_idrr,pc_out_idrr,alu1x_idrr,
 												disable_rrex_forward,rfa1_mux_control,disable_idrr,clk,stall_idrr);
  
- disable_rrex <= '0' when (disable_rrex_forward = '0' and disable_rrex_hazard = '1') else '1';
+ disable_rrex <= '1' when (disable_rrex_forward = '1' or disable_rrex_hazard = '1') else '0';
  
  -----
  --Register Read Stage
@@ -300,7 +300,7 @@ begin
 												rfd1_rrex,rfd2_rrex,disable_exma_forward,disable_rrex,clk,stall_rrex,alu2_select,
 												alu4a_mux_control,alu2a_control,alu2b_control,c_flag,z_flag);
  
- disable_exma <= '0' when (disable_exma_forward = '0' and disable_exma_hazard = '0') else '1';
+ disable_exma <= '1' when (disable_exma_forward = '1' or disable_exma_hazard = '1') else '0';
  
  -----
  --Execute Stage
@@ -312,12 +312,12 @@ begin
  
  alu2a_pipeline_mux: MUX_2x1_16BIT port map(rfd1_rrex,pc_out_rrex,alu2a_control,alu2a_pipeline);
  
- alu2a_hazard_mux: MUX_8x1_16BIT port map("0000000000000000",alu3x_mawb,alu3x_exma,se7_mawb,se7_exma,alu2x_mawb,alu2x_exma,
+ alu2a_hazard_mux: MUX_8x1_16BIT port map(alu3x_mawb,alu3x_exma,mem_data,se7_mawb,se7_exma,alu2x_mawb,alu2x_exma,
 														alu2a_pipeline,alu2a_hazard_control,alu2a_in);
  
  alu2b_pipeline_mux: MUX_4x1_16BIT port map("0000000000000010",se10_out,cb_out,rfd2_rrex,alu2b_control,alu2b_pipeline);
  
- alu2b_hazard_mux: MUX_8x1_16BIT port map("0000000000000000",alu3x_mawb,alu3x_exma,se7_mawb,se7_exma,alu2x_mawb,alu2x_exma,
+ alu2b_hazard_mux: MUX_8x1_16BIT port map(alu3x_mawb,alu3x_exma,mem_data,se7_mawb,se7_exma,alu2x_mawb,alu2x_exma,
 														alu2b_pipeline,alu2b_hazard_control,alu2b_in);
  
  complement_block: compblock port map(rfd2_rrex,cb_out);
