@@ -4,7 +4,7 @@ library work;
 use work.Gates.all;
 
 entity MUX_8x1 is 
-  port (I: in std_logic_vector(7 downto 0); S: in std_logic_vector(2 downto 0); Y_out : out std_logic);
+  port (I: in std_logic_vector(7 downto 0); S: in std_logic_vector(2 downto 0); Y: out std_logic);
   end entity MUX_8x1 ;
 
 
@@ -23,7 +23,7 @@ end component MUX_4_1;
   begin 
       M1 : MUX_4_1 port map (S(1)=>S(1), S(0)=>S(0), I(3)=>I(7), I(2)=>I(6), I(1)=>I(5), I(0)=>I(4), Y =>y_1 );
 	M2 : MUX_4_1 port map (S(1)=>S(1), S(0)=>S(0), I(3)=>I(3), I(2)=>I(2), I(1)=>I(1), I(0)=>I(0), Y =>y_0 );
-	M3 : MUX_2_1 port map ( S => S(2), I1=> y_1, I0 => y_0 , Y => Y_out);
+	M3 : MUX_2_1 port map ( S => S(2), I1=> y_1, I0 => y_0 , Y => Y);
 	
 	
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main
-Wed May 03 10:28:21 2023
+Wed May 03 10:40:27 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,19 +10,21 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Port Connectivity Checks: "MUX_4X1_3BIT:rfa3_mux"
-  6. Port Connectivity Checks: "MAWB:mawb_pipeline_register"
-  7. Port Connectivity Checks: "MUX_8X1_16BIT:alu2b_hazard_mux"
-  8. Port Connectivity Checks: "MUX_4x1_16BIT:alu2b_pipeline_mux"
-  9. Port Connectivity Checks: "MUX_8X1_16BIT:alu2a_hazard_mux"
- 10. Port Connectivity Checks: "MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M4"
- 11. Port Connectivity Checks: "MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M3"
- 12. Port Connectivity Checks: "MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M2"
- 13. Port Connectivity Checks: "MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M1"
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "MUX_4X1_3BIT:rfa3_mux"
+ 10. Port Connectivity Checks: "MAWB:mawb_pipeline_register"
+ 11. Port Connectivity Checks: "MUX_8X1_16BIT:alu2b_hazard_mux"
+ 12. Port Connectivity Checks: "MUX_4x1_16BIT:alu2b_pipeline_mux"
+ 13. Port Connectivity Checks: "MUX_8X1_16BIT:alu2a_hazard_mux"
  14. Port Connectivity Checks: "MUX_8X1_16BIT:pcmux"
  15. Port Connectivity Checks: "alu1:alu_1"
  16. Port Connectivity Checks: "register_file:rf"
- 17. Analysis & Synthesis Messages
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
 
 
 
@@ -49,22 +51,22 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Wed May 03 10:28:21 2023           ;
+; Analysis & Synthesis Status        ; Successful - Wed May 03 10:40:27 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; main                                        ;
 ; Top-level Entity Name              ; processor                                   ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
-; UFM blocks                         ; N/A until Partition Merge                   ;
-; ADC blocks                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 2                                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -170,6 +172,96 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                   ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                            ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
+; hazard_1.vhdl                    ; yes             ; User VHDL File  ; C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/hazard_1.vhdl      ;         ;
+; MUX4to1.vhdl                     ; yes             ; User VHDL File  ; C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX4to1.vhdl       ;         ;
+; MUX_8X1_16BIT.vhdl               ; yes             ; User VHDL File  ; C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_16BIT.vhdl ;         ;
+; MUX_8X1_4BIT.VHDL                ; yes             ; User VHDL File  ; C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL  ;         ;
+; MUX_8X1_1bit.vhdl                ; yes             ; User VHDL File  ; C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_1bit.vhdl  ;         ;
+; MUX_4X1_16BIT.VHDL               ; yes             ; User VHDL File  ; C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_4X1_16BIT.VHDL ;         ;
+; MUX_4X1_4BIT.vhdl                ; yes             ; User VHDL File  ; C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_4X1_4BIT.vhdl  ;         ;
+; Register_file.vhdl               ; yes             ; User VHDL File  ; C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/Register_file.vhdl ;         ;
+; pipeline_regs.vhdl               ; yes             ; User VHDL File  ; C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/pipeline_regs.vhdl ;         ;
+; MUX_2x1_16Bit.vhdl               ; yes             ; User VHDL File  ; C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_2x1_16Bit.vhdl ;         ;
+; MUX_2x1_4bit.vhdl                ; yes             ; User VHDL File  ; C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_2x1_4bit.vhdl  ;         ;
+; MUX _2X1_1Bit.vhdl               ; yes             ; User VHDL File  ; C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX _2X1_1Bit.vhdl ;         ;
+; se10.vhdl                        ; yes             ; User VHDL File  ; C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/se10.vhdl          ;         ;
+; se7.vhdl                         ; yes             ; User VHDL File  ; C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/se7.vhdl           ;         ;
+; memsplit.vhdl                    ; yes             ; User VHDL File  ; C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/memsplit.vhdl      ;         ;
+; instrmem.vhdl                    ; yes             ; User VHDL File  ; C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/instrmem.vhdl      ;         ;
+; datamem.vhdl                     ; yes             ; User VHDL File  ; C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/datamem.vhdl       ;         ;
+; compblock.vhdl                   ; yes             ; User VHDL File  ; C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/compblock.vhdl     ;         ;
+; Gates.vhdl                       ; yes             ; User VHDL File  ; C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/Gates.vhdl         ;         ;
+; alu1.vhdl                        ; yes             ; User VHDL File  ; C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu1.vhdl          ;         ;
+; alu2.vhdl                        ; yes             ; User VHDL File  ; C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl          ;         ;
+; alu3.vhdl                        ; yes             ; User VHDL File  ; C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu3.vhdl          ;         ;
+; main.vhdl                        ; yes             ; User VHDL File  ; C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl          ;         ;
+; alu4.vhdl                        ; yes             ; User VHDL File  ; C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu4.vhdl          ;         ;
+; MUX_2x1_3bit.vhdl                ; yes             ; User VHDL File  ; C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_2x1_3bit.vhdl  ;         ;
+; MUX_4x1_3bit.vhd                 ; yes             ; User VHDL File  ; C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_4x1_3bit.vhd   ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 2     ;
+;                                             ;       ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 2     ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; |processor                 ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 2    ; 0            ; 0          ; |processor          ; processor   ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
 +---------------------------------------------------+
 ; Port Connectivity Checks: "MUX_4X1_3BIT:rfa3_mux" ;
 +------+-------+----------+-------------------------+
@@ -225,46 +317,6 @@ https://fpgasoftware.intel.com/eula.
 +------+-------+----------+----------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M4"                                                                    ;
-+-------+---------+------------------+----------------------------------------------------------------------------------------------------------+
-; Port  ; Type    ; Severity         ; Details                                                                                                  ;
-+-------+---------+------------------+----------------------------------------------------------------------------------------------------------+
-; Y     ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity                                                   ;
-; y_out ; Output  ; Warning          ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+-------+---------+------------------+----------------------------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M3"                                                                    ;
-+-------+---------+------------------+----------------------------------------------------------------------------------------------------------+
-; Port  ; Type    ; Severity         ; Details                                                                                                  ;
-+-------+---------+------------------+----------------------------------------------------------------------------------------------------------+
-; Y     ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity                                                   ;
-; y_out ; Output  ; Warning          ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+-------+---------+------------------+----------------------------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M2"                                                                    ;
-+-------+---------+------------------+----------------------------------------------------------------------------------------------------------+
-; Port  ; Type    ; Severity         ; Details                                                                                                  ;
-+-------+---------+------------------+----------------------------------------------------------------------------------------------------------+
-; Y     ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity                                                   ;
-; y_out ; Output  ; Warning          ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+-------+---------+------------------+----------------------------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M1"                                                                    ;
-+-------+---------+------------------+----------------------------------------------------------------------------------------------------------+
-; Port  ; Type    ; Severity         ; Details                                                                                                  ;
-+-------+---------+------------------+----------------------------------------------------------------------------------------------------------+
-; Y     ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity                                                   ;
-; y_out ; Output  ; Warning          ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+-------+---------+------------------+----------------------------------------------------------------------------------------------------------+
-
-
 +-------------------------------------------------+
 ; Port Connectivity Checks: "MUX_8X1_16BIT:pcmux" ;
 +------+-------+----------+-----------------------+
@@ -294,13 +346,34 @@ https://fpgasoftware.intel.com/eula.
 +------+-------+----------+--------------------+
 
 
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; boundary_port     ; 2                               ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed May 03 10:28:01 2023
+    Info: Processing started: Wed May 03 10:40:03 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pipelined_risc -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -480,59 +553,18 @@ Info (12128): Elaborating entity "datamem" for hierarchy "datamem:mem2" File: C:
 Info (12128): Elaborating entity "MAWB" for hierarchy "MAWB:mawb_pipeline_register" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 350
 Warning (10541): VHDL Signal Declaration warning at pipeline_regs.vhdl(286): used implicit default value for signal "disable_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/pipeline_regs.vhdl Line: 286
 Info (12128): Elaborating entity "MUX_4X1_3BIT" for hierarchy "MUX_4X1_3BIT:rfa3_mux" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 362
-Error (12002): Port "Y" does not exist in macrofunction "M4" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 25
-Error (12002): Port "Y" does not exist in macrofunction "M3" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 24
-Error (12002): Port "Y" does not exist in macrofunction "M2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 23
-Error (12002): Port "Y" does not exist in macrofunction "M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 22
-Error (12002): Port "Y" does not exist in macrofunction "M4" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 25
-Error (12002): Port "Y" does not exist in macrofunction "M3" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 24
-Error (12002): Port "Y" does not exist in macrofunction "M2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 23
-Error (12002): Port "Y" does not exist in macrofunction "M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 22
-Error (12002): Port "Y" does not exist in macrofunction "M4" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 25
-Error (12002): Port "Y" does not exist in macrofunction "M3" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 24
-Error (12002): Port "Y" does not exist in macrofunction "M2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 23
-Error (12002): Port "Y" does not exist in macrofunction "M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 22
-Error (12002): Port "Y" does not exist in macrofunction "M4" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 25
-Error (12002): Port "Y" does not exist in macrofunction "M3" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 24
-Error (12002): Port "Y" does not exist in macrofunction "M2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 23
-Error (12002): Port "Y" does not exist in macrofunction "M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 22
-Error (12002): Port "Y" does not exist in macrofunction "M4" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 25
-Error (12002): Port "Y" does not exist in macrofunction "M3" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 24
-Error (12002): Port "Y" does not exist in macrofunction "M2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 23
-Error (12002): Port "Y" does not exist in macrofunction "M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 22
-Error (12002): Port "Y" does not exist in macrofunction "M4" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 25
-Error (12002): Port "Y" does not exist in macrofunction "M3" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 24
-Error (12002): Port "Y" does not exist in macrofunction "M2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 23
-Error (12002): Port "Y" does not exist in macrofunction "M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 22
-Error (12002): Port "Y" does not exist in macrofunction "M4" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 25
-Error (12002): Port "Y" does not exist in macrofunction "M3" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 24
-Error (12002): Port "Y" does not exist in macrofunction "M2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 23
-Error (12002): Port "Y" does not exist in macrofunction "M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 22
-Error (12002): Port "Y" does not exist in macrofunction "M4" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 25
-Error (12002): Port "Y" does not exist in macrofunction "M3" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 24
-Error (12002): Port "Y" does not exist in macrofunction "M2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 23
-Error (12002): Port "Y" does not exist in macrofunction "M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 22
-Error (12002): Port "Y" does not exist in macrofunction "M4" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 25
-Error (12002): Port "Y" does not exist in macrofunction "M3" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 24
-Error (12002): Port "Y" does not exist in macrofunction "M2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 23
-Error (12002): Port "Y" does not exist in macrofunction "M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 22
-Error (12002): Port "Y" does not exist in macrofunction "M4" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 25
-Error (12002): Port "Y" does not exist in macrofunction "M3" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 24
-Error (12002): Port "Y" does not exist in macrofunction "M2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 23
-Error (12002): Port "Y" does not exist in macrofunction "M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 22
-Error (12002): Port "Y" does not exist in macrofunction "M4" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 25
-Error (12002): Port "Y" does not exist in macrofunction "M3" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 24
-Error (12002): Port "Y" does not exist in macrofunction "M2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 23
-Error (12002): Port "Y" does not exist in macrofunction "M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 22
-Error (12002): Port "Y" does not exist in macrofunction "M4" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 25
-Error (12002): Port "Y" does not exist in macrofunction "M3" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 24
-Error (12002): Port "Y" does not exist in macrofunction "M2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 23
-Error (12002): Port "Y" does not exist in macrofunction "M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 22
-Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 48 errors, 23 warnings
-    Error: Peak virtual memory: 4800 megabytes
-    Error: Processing ended: Wed May 03 10:28:21 2023
-    Error: Elapsed time: 00:00:20
-    Error: Total CPU time (on all processors): 00:00:31
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 13
+    Warning (15610): No output dependent on input pin "reset" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 13
+Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 4807 megabytes
+    Info: Processing ended: Wed May 03 10:40:27 2023
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:33
 
 

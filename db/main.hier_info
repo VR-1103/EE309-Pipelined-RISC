@@ -916,7 +916,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M1|MUX_4_1:M1
@@ -1172,7 +1172,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M2|MUX_4_1:M1
@@ -1428,7 +1428,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M3|MUX_4_1:M1
@@ -1684,7 +1684,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M4|MUX_4_1:M1
@@ -1991,7 +1991,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M2|MUX_8x1:M1|MUX_4_1:M1
@@ -2247,7 +2247,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M2|MUX_8x1:M2|MUX_4_1:M1
@@ -2503,7 +2503,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M2|MUX_8x1:M3|MUX_4_1:M1
@@ -2759,7 +2759,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M2|MUX_8x1:M4|MUX_4_1:M1
@@ -3066,7 +3066,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M3|MUX_8x1:M1|MUX_4_1:M1
@@ -3322,7 +3322,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M3|MUX_8x1:M2|MUX_4_1:M1
@@ -3578,7 +3578,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M3|MUX_8x1:M3|MUX_4_1:M1
@@ -3834,7 +3834,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M3|MUX_8x1:M4|MUX_4_1:M1
@@ -4141,7 +4141,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M4|MUX_8x1:M1|MUX_4_1:M1
@@ -4397,7 +4397,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M4|MUX_8x1:M2|MUX_4_1:M1
@@ -4653,7 +4653,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M4|MUX_8x1:M3|MUX_4_1:M1
@@ -4909,7 +4909,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M4|MUX_8x1:M4|MUX_4_1:M1
@@ -7311,7 +7311,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2a_hazard_mux|MUX_8X1_4BIT:M1|MUX_8x1:M1|MUX_4_1:M1
@@ -7567,7 +7567,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2a_hazard_mux|MUX_8X1_4BIT:M1|MUX_8x1:M2|MUX_4_1:M1
@@ -7823,7 +7823,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2a_hazard_mux|MUX_8X1_4BIT:M1|MUX_8x1:M3|MUX_4_1:M1
@@ -8079,7 +8079,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2a_hazard_mux|MUX_8X1_4BIT:M1|MUX_8x1:M4|MUX_4_1:M1
@@ -8386,7 +8386,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2a_hazard_mux|MUX_8X1_4BIT:M2|MUX_8x1:M1|MUX_4_1:M1
@@ -8642,7 +8642,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2a_hazard_mux|MUX_8X1_4BIT:M2|MUX_8x1:M2|MUX_4_1:M1
@@ -8898,7 +8898,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2a_hazard_mux|MUX_8X1_4BIT:M2|MUX_8x1:M3|MUX_4_1:M1
@@ -9154,7 +9154,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2a_hazard_mux|MUX_8X1_4BIT:M2|MUX_8x1:M4|MUX_4_1:M1
@@ -9461,7 +9461,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2a_hazard_mux|MUX_8X1_4BIT:M3|MUX_8x1:M1|MUX_4_1:M1
@@ -9717,7 +9717,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2a_hazard_mux|MUX_8X1_4BIT:M3|MUX_8x1:M2|MUX_4_1:M1
@@ -9973,7 +9973,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2a_hazard_mux|MUX_8X1_4BIT:M3|MUX_8x1:M3|MUX_4_1:M1
@@ -10229,7 +10229,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2a_hazard_mux|MUX_8X1_4BIT:M3|MUX_8x1:M4|MUX_4_1:M1
@@ -10536,7 +10536,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2a_hazard_mux|MUX_8X1_4BIT:M4|MUX_8x1:M1|MUX_4_1:M1
@@ -10792,7 +10792,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2a_hazard_mux|MUX_8X1_4BIT:M4|MUX_8x1:M2|MUX_4_1:M1
@@ -11048,7 +11048,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2a_hazard_mux|MUX_8X1_4BIT:M4|MUX_8x1:M3|MUX_4_1:M1
@@ -11304,7 +11304,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2a_hazard_mux|MUX_8X1_4BIT:M4|MUX_8x1:M4|MUX_4_1:M1
@@ -13649,7 +13649,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2b_hazard_mux|MUX_8X1_4BIT:M1|MUX_8x1:M1|MUX_4_1:M1
@@ -13905,7 +13905,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2b_hazard_mux|MUX_8X1_4BIT:M1|MUX_8x1:M2|MUX_4_1:M1
@@ -14161,7 +14161,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2b_hazard_mux|MUX_8X1_4BIT:M1|MUX_8x1:M3|MUX_4_1:M1
@@ -14417,7 +14417,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2b_hazard_mux|MUX_8X1_4BIT:M1|MUX_8x1:M4|MUX_4_1:M1
@@ -14724,7 +14724,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2b_hazard_mux|MUX_8X1_4BIT:M2|MUX_8x1:M1|MUX_4_1:M1
@@ -14980,7 +14980,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2b_hazard_mux|MUX_8X1_4BIT:M2|MUX_8x1:M2|MUX_4_1:M1
@@ -15236,7 +15236,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2b_hazard_mux|MUX_8X1_4BIT:M2|MUX_8x1:M3|MUX_4_1:M1
@@ -15492,7 +15492,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2b_hazard_mux|MUX_8X1_4BIT:M2|MUX_8x1:M4|MUX_4_1:M1
@@ -15799,7 +15799,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2b_hazard_mux|MUX_8X1_4BIT:M3|MUX_8x1:M1|MUX_4_1:M1
@@ -16055,7 +16055,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2b_hazard_mux|MUX_8X1_4BIT:M3|MUX_8x1:M2|MUX_4_1:M1
@@ -16311,7 +16311,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2b_hazard_mux|MUX_8X1_4BIT:M3|MUX_8x1:M3|MUX_4_1:M1
@@ -16567,7 +16567,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2b_hazard_mux|MUX_8X1_4BIT:M3|MUX_8x1:M4|MUX_4_1:M1
@@ -16874,7 +16874,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2b_hazard_mux|MUX_8X1_4BIT:M4|MUX_8x1:M1|MUX_4_1:M1
@@ -17130,7 +17130,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2b_hazard_mux|MUX_8X1_4BIT:M4|MUX_8x1:M2|MUX_4_1:M1
@@ -17386,7 +17386,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2b_hazard_mux|MUX_8X1_4BIT:M4|MUX_8x1:M3|MUX_4_1:M1
@@ -17642,7 +17642,7 @@ S[0] => MUX_4_1:M2.S[0]
 S[1] => MUX_4_1:M1.S[1]
 S[1] => MUX_4_1:M2.S[1]
 S[2] => MUX_2_1:M3.S
-Y_out <= MUX_2_1:M3.Y
+Y <= MUX_2_1:M3.Y
 
 
 |processor|MUX_8X1_16BIT:alu2b_hazard_mux|MUX_8X1_4BIT:M4|MUX_8x1:M4|MUX_4_1:M1
