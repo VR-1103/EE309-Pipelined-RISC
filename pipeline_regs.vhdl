@@ -22,14 +22,14 @@ architecture simple of IFID is
                 PC_out <= PC;
                 Mem1_D_out <= Mem1_D;
                 alu1_C_out <= alu1_C;
+					 if (disable = '1') then
+						disable_wb <= disable;
+					 else
+						disable_wb <= '0';
+					 end if;
 				else
 					null;
             end if;
-				if (rising_edge(clk) and disable = '1') then
-					disable_wb <= disable;
-				else
-					disable_wb <= '0';
-				end if;
         end process;
 end architecture simple;
 
@@ -76,14 +76,14 @@ architecture simple of IDRR is
 					 else
 						rfa1_mux <= '0';
 					end if;
+					if (disable = '1') then
+						disable_wb <= disable;
+					 else
+						disable_wb <= '0';
+					 end if;
 				else
 					null;
             end if;
-				if (rising_edge(clk) and disable = '1') then
-					disable_wb <= disable;
-				else
-					disable_wb <= '0';
-				end if;
         end process;
 end architecture simple;
 
@@ -184,16 +184,16 @@ architecture simple of RREX is
 					else
 						alu4a_mux_control <= '0';
 					end if;
+					
+					if (disable = '1') then
+						disable_wb <= disable;
+					 else
+						disable_wb <= '0';
+					 end if;
 				
 				else
 					null;
             end if;
-				
-				if (rising_edge(clk) and disable = '1') then
-					disable_wb <= disable;
-				else
-					disable_wb <= alu_will_disable;
-				end if;
         end process;
 end architecture simple;
 
@@ -251,13 +251,13 @@ architecture simple of EXMA is
                     end if;
 					else M_write <= '0';
 					end if;
+					if (disable = '1') then
+						disable_wb <= disable;
+					 else
+						disable_wb <= '0';
+					 end if;
             else
 					null;
-				end if;
-				if (rising_edge(clk) and disable = '1') then
-					disable_wb <= disable;
-				else
-					disable_wb <= '0';
 				end if;
         end process;
 end architecture simple;

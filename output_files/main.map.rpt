@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main
-Tue May 02 22:10:17 2023
+Wed May 03 10:28:21 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,7 +10,19 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Port Connectivity Checks: "MUX_4X1_3BIT:rfa3_mux"
+  6. Port Connectivity Checks: "MAWB:mawb_pipeline_register"
+  7. Port Connectivity Checks: "MUX_8X1_16BIT:alu2b_hazard_mux"
+  8. Port Connectivity Checks: "MUX_4x1_16BIT:alu2b_pipeline_mux"
+  9. Port Connectivity Checks: "MUX_8X1_16BIT:alu2a_hazard_mux"
+ 10. Port Connectivity Checks: "MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M4"
+ 11. Port Connectivity Checks: "MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M3"
+ 12. Port Connectivity Checks: "MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M2"
+ 13. Port Connectivity Checks: "MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M1"
+ 14. Port Connectivity Checks: "MUX_8X1_16BIT:pcmux"
+ 15. Port Connectivity Checks: "alu1:alu_1"
+ 16. Port Connectivity Checks: "register_file:rf"
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -37,7 +49,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Tue May 02 22:10:17 2023           ;
+; Analysis & Synthesis Status        ; Failed - Wed May 03 10:28:21 2023           ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; main                                        ;
 ; Top-level Entity Name              ; processor                                   ;
@@ -158,13 +170,137 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
++---------------------------------------------------+
+; Port Connectivity Checks: "MUX_4X1_3BIT:rfa3_mux" ;
++------+-------+----------+-------------------------+
+; Port ; Type  ; Severity ; Details                 ;
++------+-------+----------+-------------------------+
+; i3   ; Input ; Info     ; Stuck at GND            ;
++------+-------+----------+-------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MAWB:mawb_pipeline_register"                                                                     ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; d_5_0_out         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; d_8_0_out         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; d_7_0_out         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; mem1_d_out[15..3] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; pc_out            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; alu1_c_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; rf_d1_out         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; rf_d2_out         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; flags_out         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "MUX_8X1_16BIT:alu2b_hazard_mux" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; i7   ; Input ; Info     ; Stuck at GND                     ;
++------+-------+----------+----------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "MUX_4x1_16BIT:alu2b_pipeline_mux" ;
++-----------+-------+----------+-------------------------------+
+; Port      ; Type  ; Severity ; Details                       ;
++-----------+-------+----------+-------------------------------+
+; i3[15..2] ; Input ; Info     ; Stuck at GND                  ;
+; i3[1]     ; Input ; Info     ; Stuck at VCC                  ;
+; i3[0]     ; Input ; Info     ; Stuck at GND                  ;
++-----------+-------+----------+-------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "MUX_8X1_16BIT:alu2a_hazard_mux" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; i7   ; Input ; Info     ; Stuck at GND                     ;
++------+-------+----------+----------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M4"                                                                    ;
++-------+---------+------------------+----------------------------------------------------------------------------------------------------------+
+; Port  ; Type    ; Severity         ; Details                                                                                                  ;
++-------+---------+------------------+----------------------------------------------------------------------------------------------------------+
+; Y     ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity                                                   ;
+; y_out ; Output  ; Warning          ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------+---------+------------------+----------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M3"                                                                    ;
++-------+---------+------------------+----------------------------------------------------------------------------------------------------------+
+; Port  ; Type    ; Severity         ; Details                                                                                                  ;
++-------+---------+------------------+----------------------------------------------------------------------------------------------------------+
+; Y     ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity                                                   ;
+; y_out ; Output  ; Warning          ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------+---------+------------------+----------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M2"                                                                    ;
++-------+---------+------------------+----------------------------------------------------------------------------------------------------------+
+; Port  ; Type    ; Severity         ; Details                                                                                                  ;
++-------+---------+------------------+----------------------------------------------------------------------------------------------------------+
+; Y     ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity                                                   ;
+; y_out ; Output  ; Warning          ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------+---------+------------------+----------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M1"                                                                    ;
++-------+---------+------------------+----------------------------------------------------------------------------------------------------------+
+; Port  ; Type    ; Severity         ; Details                                                                                                  ;
++-------+---------+------------------+----------------------------------------------------------------------------------------------------------+
+; Y     ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity                                                   ;
+; y_out ; Output  ; Warning          ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------+---------+------------------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "MUX_8X1_16BIT:pcmux" ;
++------+-------+----------+-----------------------+
+; Port ; Type  ; Severity ; Details               ;
++------+-------+----------+-----------------------+
+; i7   ; Input ; Info     ; Stuck at GND          ;
+; i6   ; Input ; Info     ; Stuck at GND          ;
++------+-------+----------+-----------------------+
+
+
++--------------------------------------------+
+; Port Connectivity Checks: "alu1:alu_1"     ;
++----------+-------+----------+--------------+
+; Port     ; Type  ; Severity ; Details      ;
++----------+-------+----------+--------------+
+; b[15..1] ; Input ; Info     ; Stuck at GND ;
+; b[0]     ; Input ; Info     ; Stuck at VCC ;
++----------+-------+----------+--------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "register_file:rf" ;
++------+-------+----------+--------------------+
+; Port ; Type  ; Severity ; Details            ;
++------+-------+----------+--------------------+
+; pc_w ; Input ; Info     ; Stuck at VCC       ;
++------+-------+----------+--------------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue May 02 22:10:01 2023
+    Info: Processing started: Wed May 03 10:28:01 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pipelined_risc -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -263,32 +399,140 @@ Info (12021): Found 2 design units, including 1 entities, in source file main.vh
 Info (12021): Found 2 design units, including 1 entities, in source file alu4.vhdl
     Info (12022): Found design unit 1: alu4-Struct File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu4.vhdl Line: 9
     Info (12023): Found entity 1: alu4 File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu4.vhdl Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux_2x1_3bit.vhdl
+    Info (12022): Found design unit 1: MUX_2X1_3BIT-Struct File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_2x1_3bit.vhdl Line: 11
+    Info (12023): Found entity 1: MUX_2X1_3BIT File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_2x1_3bit.vhdl Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file mux_4x1_3bit.vhd
+    Info (12022): Found design unit 1: MUX_4X1_3BIT-Struct File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_4x1_3bit.vhd Line: 11
+    Info (12023): Found entity 1: MUX_4X1_3BIT File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_4x1_3bit.vhd Line: 6
 Info (12127): Elaborating entity "processor" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at main.vhdl(225): object "pc_out_mawb" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 225
-Warning (10541): VHDL Signal Declaration warning at main.vhdl(225): used implicit default value for signal "mem1_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 225
-Warning (10036): Verilog HDL or VHDL warning at main.vhdl(227): object "alu1x_mawb" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 227
-Warning (10036): Verilog HDL or VHDL warning at main.vhdl(227): object "rfd1_mawb" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 227
-Warning (10036): Verilog HDL or VHDL warning at main.vhdl(227): object "rfd2_mawb" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 227
-Warning (10541): VHDL Signal Declaration warning at main.vhdl(225): used implicit default value for signal "alu2a_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 225
-Warning (10541): VHDL Signal Declaration warning at main.vhdl(225): used implicit default value for signal "alu2b_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 225
-Warning (10541): VHDL Signal Declaration warning at main.vhdl(231): used implicit default value for signal "stall_ifid" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 231
-Warning (10541): VHDL Signal Declaration warning at main.vhdl(231): used implicit default value for signal "stall_idrr" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 231
-Warning (10541): VHDL Signal Declaration warning at main.vhdl(231): used implicit default value for signal "stall_rrex" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 231
-Warning (10036): Verilog HDL or VHDL warning at main.vhdl(238): object "flags_wb" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 238
-Warning (10036): Verilog HDL or VHDL warning at main.vhdl(246): object "mawb_5_0" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 246
-Warning (10036): Verilog HDL or VHDL warning at main.vhdl(248): object "mawb_8_0" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 248
-Warning (10036): Verilog HDL or VHDL warning at main.vhdl(250): object "mawb_7_0" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 250
-Error (10344): VHDL expression error at main.vhdl(276): expression has 3 elements, but must have 4 elements File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 276
-Error (10344): VHDL expression error at main.vhdl(277): expression has 3 elements, but must have 4 elements File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 277
-Error (10344): VHDL expression error at main.vhdl(277): expression has 3 elements, but must have 6 elements File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 277
-Error (10346): VHDL error at main.vhdl(276): formal port or parameter "D_11_9" must have actual or default value File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 276
-Error (10346): VHDL error at main.vhdl(276): formal port or parameter "D_8_6" must have actual or default value File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 276
-Error (10346): VHDL error at main.vhdl(276): formal port or parameter "D_5_3" must have actual or default value File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 276
-Error (12153): Can't elaborate top-level user hierarchy
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 7 errors, 15 warnings
-    Error: Peak virtual memory: 4778 megabytes
-    Error: Processing ended: Tue May 02 22:10:17 2023
-    Error: Elapsed time: 00:00:16
-    Error: Total CPU time (on all processors): 00:00:26
+Warning (10036): Verilog HDL or VHDL warning at main.vhdl(233): object "pc_out_mawb" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 233
+Warning (10541): VHDL Signal Declaration warning at main.vhdl(233): used implicit default value for signal "mem1_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 233
+Warning (10036): Verilog HDL or VHDL warning at main.vhdl(235): object "alu1x_mawb" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 235
+Warning (10036): Verilog HDL or VHDL warning at main.vhdl(235): object "rfd1_mawb" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 235
+Warning (10036): Verilog HDL or VHDL warning at main.vhdl(235): object "rfd2_mawb" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 235
+Warning (10541): VHDL Signal Declaration warning at main.vhdl(239): used implicit default value for signal "stall_ifid" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 239
+Warning (10541): VHDL Signal Declaration warning at main.vhdl(239): used implicit default value for signal "stall_idrr" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 239
+Warning (10541): VHDL Signal Declaration warning at main.vhdl(239): used implicit default value for signal "stall_rrex" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 239
+Warning (10036): Verilog HDL or VHDL warning at main.vhdl(246): object "flags_wb" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 246
+Warning (10036): Verilog HDL or VHDL warning at main.vhdl(254): object "mawb_5_0" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 254
+Warning (10036): Verilog HDL or VHDL warning at main.vhdl(256): object "mawb_8_0" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 256
+Warning (10036): Verilog HDL or VHDL warning at main.vhdl(258): object "mawb_7_0" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 258
+Info (12128): Elaborating entity "register_file" for hierarchy "register_file:rf" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 266
+Info (12128): Elaborating entity "instrmem" for hierarchy "instrmem:mem1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 268
+Info (12128): Elaborating entity "alu1" for hierarchy "alu1:alu_1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 270
+Info (12128): Elaborating entity "MUX_8X1_16BIT" for hierarchy "MUX_8X1_16BIT:pcmux" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 272
+Info (12128): Elaborating entity "MUX_8X1_4BIT" for hierarchy "MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_16BIT.vhdl Line: 20
+Info (12128): Elaborating entity "MUX_8x1" for hierarchy "MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 22
+Info (12128): Elaborating entity "MUX_4_1" for hierarchy "MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M1|MUX_4_1:M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_1bit.vhdl Line: 24
+Info (12128): Elaborating entity "MUX_2_1" for hierarchy "MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M1|MUX_4_1:M1|MUX_2_1:MUX2_1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX4to1.vhdl Line: 19
+Info (12128): Elaborating entity "INVERTER" for hierarchy "MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M1|MUX_4_1:M1|MUX_2_1:MUX2_1|INVERTER:NOT1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX _2X1_1Bit.vhdl Line: 16
+Info (12128): Elaborating entity "AND_2" for hierarchy "MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M1|MUX_4_1:M1|MUX_2_1:MUX2_1|AND_2:AND1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX _2X1_1Bit.vhdl Line: 17
+Info (12128): Elaborating entity "OR_2" for hierarchy "MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M1|MUX_4_1:M1|MUX_2_1:MUX2_1|OR_2:OR1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX _2X1_1Bit.vhdl Line: 20
+Info (12128): Elaborating entity "IFID" for hierarchy "IFID:ifid_pipeline_register" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 275
+Warning (10492): VHDL Process Statement warning at pipeline_regs.vhdl(21): signal "stall" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/pipeline_regs.vhdl Line: 21
+Info (12128): Elaborating entity "memsplit" for hierarchy "memsplit:decoder" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 282
+Info (12128): Elaborating entity "IDRR" for hierarchy "IDRR:idrr_pipeline_register" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 284
+Warning (10492): VHDL Process Statement warning at pipeline_regs.vhdl(63): signal "stall" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/pipeline_regs.vhdl Line: 63
+Info (12128): Elaborating entity "MUX_2X1_3BIT" for hierarchy "MUX_2X1_3BIT:rfa1_mux" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 295
+Info (12128): Elaborating entity "RREX" for hierarchy "RREX:rrex_pipeline_register" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 297
+Warning (10036): Verilog HDL or VHDL warning at pipeline_regs.vhdl(121): object "alu_will_disable" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/pipeline_regs.vhdl Line: 121
+Warning (10492): VHDL Process Statement warning at pipeline_regs.vhdl(123): signal "stall" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/pipeline_regs.vhdl Line: 123
+Info (12128): Elaborating entity "se10" for hierarchy "se10:se_10" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 309
+Info (12128): Elaborating entity "se7" for hierarchy "se7:se_7" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 311
+Info (12128): Elaborating entity "MUX_2x1_16BIT" for hierarchy "MUX_2x1_16BIT:alu2a_pipeline_mux" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 313
+Info (12128): Elaborating entity "MUX_2X1_4BIT" for hierarchy "MUX_2x1_16BIT:alu2a_pipeline_mux|MUX_2X1_4BIT:M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_2x1_16Bit.vhdl Line: 20
+Info (12128): Elaborating entity "MUX_4x1_16BIT" for hierarchy "MUX_4x1_16BIT:alu2b_pipeline_mux" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 318
+Info (12128): Elaborating entity "MUX_4X1_4BIT" for hierarchy "MUX_4x1_16BIT:alu2b_pipeline_mux|MUX_4X1_4BIT:M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_4X1_16BIT.VHDL Line: 21
+Info (12128): Elaborating entity "compblock" for hierarchy "compblock:complement_block" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 323
+Info (12128): Elaborating entity "alu2" for hierarchy "alu2:alu_2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 325
+Warning (10492): VHDL Process Statement warning at alu2.vhdl(42): signal "disable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 42
+Warning (10631): VHDL Process Statement warning at alu2.vhdl(37): inferring latch(es) for signal or variable "X", which holds its previous value in one or more paths through the process File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
+Warning (10631): VHDL Process Statement warning at alu2.vhdl(37): inferring latch(es) for signal or variable "C", which holds its previous value in one or more paths through the process File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
+Warning (10631): VHDL Process Statement warning at alu2.vhdl(37): inferring latch(es) for signal or variable "Z", which holds its previous value in one or more paths through the process File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
+Info (10041): Inferred latch for "Z" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
+Info (10041): Inferred latch for "C" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
+Info (10041): Inferred latch for "X[0]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
+Info (10041): Inferred latch for "X[1]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
+Info (10041): Inferred latch for "X[2]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
+Info (10041): Inferred latch for "X[3]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
+Info (10041): Inferred latch for "X[4]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
+Info (10041): Inferred latch for "X[5]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
+Info (10041): Inferred latch for "X[6]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
+Info (10041): Inferred latch for "X[7]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
+Info (10041): Inferred latch for "X[8]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
+Info (10041): Inferred latch for "X[9]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
+Info (10041): Inferred latch for "X[10]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
+Info (10041): Inferred latch for "X[11]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
+Info (10041): Inferred latch for "X[12]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
+Info (10041): Inferred latch for "X[13]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
+Info (10041): Inferred latch for "X[14]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
+Info (10041): Inferred latch for "X[15]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
+Info (12128): Elaborating entity "alu3" for hierarchy "alu3:alu_3" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 327
+Info (12128): Elaborating entity "alu4" for hierarchy "alu4:alu_4" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 331
+Info (12128): Elaborating entity "EXMA" for hierarchy "EXMA:exma_pipeline_register" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 333
+Info (12128): Elaborating entity "hazard_EX" for hierarchy "hazard_EX:hazard_block" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 338
+Info (10041): Inferred latch for "disable_EXMA" at hazard_1.vhdl(76) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/hazard_1.vhdl Line: 76
+Info (10041): Inferred latch for "disable_RREX" at hazard_1.vhdl(75) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/hazard_1.vhdl Line: 75
+Info (10041): Inferred latch for "disable_IDRR" at hazard_1.vhdl(74) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/hazard_1.vhdl Line: 74
+Info (10041): Inferred latch for "disable_IFID" at hazard_1.vhdl(73) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/hazard_1.vhdl Line: 73
+Info (12128): Elaborating entity "datamem" for hierarchy "datamem:mem2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 348
+Info (12128): Elaborating entity "MAWB" for hierarchy "MAWB:mawb_pipeline_register" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 350
+Warning (10541): VHDL Signal Declaration warning at pipeline_regs.vhdl(286): used implicit default value for signal "disable_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/pipeline_regs.vhdl Line: 286
+Info (12128): Elaborating entity "MUX_4X1_3BIT" for hierarchy "MUX_4X1_3BIT:rfa3_mux" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 362
+Error (12002): Port "Y" does not exist in macrofunction "M4" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 25
+Error (12002): Port "Y" does not exist in macrofunction "M3" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 24
+Error (12002): Port "Y" does not exist in macrofunction "M2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 23
+Error (12002): Port "Y" does not exist in macrofunction "M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 22
+Error (12002): Port "Y" does not exist in macrofunction "M4" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 25
+Error (12002): Port "Y" does not exist in macrofunction "M3" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 24
+Error (12002): Port "Y" does not exist in macrofunction "M2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 23
+Error (12002): Port "Y" does not exist in macrofunction "M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 22
+Error (12002): Port "Y" does not exist in macrofunction "M4" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 25
+Error (12002): Port "Y" does not exist in macrofunction "M3" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 24
+Error (12002): Port "Y" does not exist in macrofunction "M2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 23
+Error (12002): Port "Y" does not exist in macrofunction "M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 22
+Error (12002): Port "Y" does not exist in macrofunction "M4" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 25
+Error (12002): Port "Y" does not exist in macrofunction "M3" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 24
+Error (12002): Port "Y" does not exist in macrofunction "M2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 23
+Error (12002): Port "Y" does not exist in macrofunction "M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 22
+Error (12002): Port "Y" does not exist in macrofunction "M4" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 25
+Error (12002): Port "Y" does not exist in macrofunction "M3" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 24
+Error (12002): Port "Y" does not exist in macrofunction "M2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 23
+Error (12002): Port "Y" does not exist in macrofunction "M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 22
+Error (12002): Port "Y" does not exist in macrofunction "M4" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 25
+Error (12002): Port "Y" does not exist in macrofunction "M3" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 24
+Error (12002): Port "Y" does not exist in macrofunction "M2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 23
+Error (12002): Port "Y" does not exist in macrofunction "M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 22
+Error (12002): Port "Y" does not exist in macrofunction "M4" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 25
+Error (12002): Port "Y" does not exist in macrofunction "M3" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 24
+Error (12002): Port "Y" does not exist in macrofunction "M2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 23
+Error (12002): Port "Y" does not exist in macrofunction "M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 22
+Error (12002): Port "Y" does not exist in macrofunction "M4" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 25
+Error (12002): Port "Y" does not exist in macrofunction "M3" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 24
+Error (12002): Port "Y" does not exist in macrofunction "M2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 23
+Error (12002): Port "Y" does not exist in macrofunction "M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 22
+Error (12002): Port "Y" does not exist in macrofunction "M4" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 25
+Error (12002): Port "Y" does not exist in macrofunction "M3" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 24
+Error (12002): Port "Y" does not exist in macrofunction "M2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 23
+Error (12002): Port "Y" does not exist in macrofunction "M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 22
+Error (12002): Port "Y" does not exist in macrofunction "M4" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 25
+Error (12002): Port "Y" does not exist in macrofunction "M3" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 24
+Error (12002): Port "Y" does not exist in macrofunction "M2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 23
+Error (12002): Port "Y" does not exist in macrofunction "M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 22
+Error (12002): Port "Y" does not exist in macrofunction "M4" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 25
+Error (12002): Port "Y" does not exist in macrofunction "M3" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 24
+Error (12002): Port "Y" does not exist in macrofunction "M2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 23
+Error (12002): Port "Y" does not exist in macrofunction "M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 22
+Error (12002): Port "Y" does not exist in macrofunction "M4" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 25
+Error (12002): Port "Y" does not exist in macrofunction "M3" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 24
+Error (12002): Port "Y" does not exist in macrofunction "M2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 23
+Error (12002): Port "Y" does not exist in macrofunction "M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 22
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 48 errors, 23 warnings
+    Error: Peak virtual memory: 4800 megabytes
+    Error: Processing ended: Wed May 03 10:28:21 2023
+    Error: Elapsed time: 00:00:20
+    Error: Total CPU time (on all processors): 00:00:31
 
 

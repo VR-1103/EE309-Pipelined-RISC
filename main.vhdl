@@ -33,10 +33,10 @@ end component;
 component IDRR is 
     port( Mem1_D, PC, alu1_C : in std_logic_vector(15 downto 0); 
           opcode: in std_logic_vector(3 downto 0);
-          D_11_9, D_8_6 : in std_logic_vector(3 downto 0);
+          D_11_9, D_8_6 : in std_logic_vector(2 downto 0);
           D_5_0: in std_logic_vector(5 downto 0);
           D_8_0: in std_logic_vector(8 downto 0);
-          D_5_3: in std_logic_vector(5 downto 0);
+          D_5_3: in std_logic_vector(2 downto 0);
           D_7_0: in std_logic_vector(7 downto 0);
 
           opcode_out: out std_logic_vector(3 downto 0);
@@ -220,6 +220,14 @@ component hazard_EX is
           alu2a_mux, alu2b_mux, PC_mux : out std_logic_vector(2 downto 0));  -- disable means we don't write anything in pipelined register in WB stage
 end component;
  
+ component MUX_2X1_3BIT is 
+	port (I0,I1 : in std_logic_vector(2 downto 0); Sel : in std_logic ; Y : out std_logic_vector(2 downto 0));
+ end component;
+ 
+ component MUX_4X1_3BIT is 
+  port (I3,I2,I1,I0:in std_logic_vector(2 downto 0) ; S: in std_logic_vector(1 downto 0) ; Y : out std_logic_vector(2 downto 0));
+ end component;
+ 
  -- Initializing the required signals
  
  signal pc_in,pc_out,pc_out_ifid,pc_out_idrr,pc_out_rrex,pc_out_exma,pc_out_mawb,mem1_in,mem1_out,mem1_out_ifid,
@@ -284,7 +292,7 @@ begin
  --Register Read Stage
  -----
  
- rfa1_mux: MUX_2x1_16BIT port map(idrr_11_9,idrr_8_6,rfa1_mux_control,rfa1_in);
+ rfa1_mux: MUX_2x1_3BIT port map(idrr_11_9,idrr_8_6,rfa1_mux_control,rfa1_in);
  
  rrex_pipeline_register: RREX port map(mem1_out_idrr,pc_out_idrr,alu1x_idrr,rfd1,rfd2,opcode_idrr,idrr_11_9,
 												idrr_8_6,idrr_5_0,idrr_8_0,idrr_5_3,idrr_7_0,opcode_rrex,rrex_11_9,rrex_8_6,
@@ -304,12 +312,12 @@ begin
  
  alu2a_pipeline_mux: MUX_2x1_16BIT port map(rfd1_rrex,pc_out_rrex,alu2a_control,alu2a_pipeline);
  
- alu2a_hazard_mux: MUX_8x1_16BIT port map(alu3x_mawb,alu3x_exma,se7_mawb,se7_exma,alu2x_mawb,alu2x_exma,
+ alu2a_hazard_mux: MUX_8x1_16BIT port map("0000000000000000",alu3x_mawb,alu3x_exma,se7_mawb,se7_exma,alu2x_mawb,alu2x_exma,
 														alu2a_pipeline,alu2a_hazard_control,alu2a_in);
  
  alu2b_pipeline_mux: MUX_4x1_16BIT port map("0000000000000010",se10_out,cb_out,rfd2_rrex,alu2b_control,alu2b_pipeline);
  
- alu2b_hazard_mux: MUX_8x1_16BIT port map(alu3x_mawb,alu3x_exma,se7_mawb,se7_exma,alu2x_mawb,alu2x_exma,
+ alu2b_hazard_mux: MUX_8x1_16BIT port map("0000000000000000",alu3x_mawb,alu3x_exma,se7_mawb,se7_exma,alu2x_mawb,alu2x_exma,
 														alu2b_pipeline,alu2b_hazard_control,alu2b_in);
  
  complement_block: compblock port map(rfd2_rrex,cb_out);
@@ -351,7 +359,7 @@ begin
   
   rfd3_mux: MUX_4x1_16BIT port map(alu3x_mawb,mem_data_wb,se7_mawb,alu2x_mawb,rfd3_mux_control,rfd3_in);
   
-  rfa3_mux: MUX_4X1_16BIT port map("0000000000000000",mawb_11_9,mawb_8_6,mawb_5_3,rfa3_mux_control,rfa3_in);
+  rfa3_mux: MUX_4X1_3BIT port map("000",mawb_11_9,mawb_8_6,mawb_5_3,rfa3_mux_control,rfa3_in);
  
  
 end architecture;
