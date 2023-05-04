@@ -20,6 +20,7 @@ vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.v
 vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu3.vhdl}
 vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu4.vhdl}
 vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/DUT.vhdl}
+vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl}
 vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX4to1.vhdl}
 vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_16BIT.vhdl}
 vcom -93 -work work {C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL}

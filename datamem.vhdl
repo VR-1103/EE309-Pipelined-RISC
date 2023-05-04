@@ -30,7 +30,7 @@ signal M_add_temp: std_logic_vector(15 downto 0);
 
 begin
 -- memory read always provides an asynchronous output but mem write happens synchronously
-M_add_temp <= M_add when(M_add < "0000000000101000") else "0000000000100111";
+M_add_temp <= "0000000000100111" when(M_add >= "0000000000101000") else M_add;
 
 memory_write: process(clock, Mem_W, M_inp, M_add_temp)
     begin

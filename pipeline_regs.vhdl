@@ -154,7 +154,7 @@ architecture simple of RREX is
 						end if;
 					elsif (opcode(3 downto 2) = "10") then
 						alu2b_pipeline_control <= "00";
-					elsif (opcode(3 downto 0) = "0000" or opcode(3 downto 0) = "0011" or opcode(3 downto 0) = "0100") then
+					elsif (opcode(3 downto 0) = "0000" or opcode(3 downto 0) = "0011" or opcode(3 downto 1) = "010") then
 						alu2b_pipeline_control <= "10";
 					elsif (opcode(3 downto 2) = "11") then
 						alu2b_pipeline_control <= "11";

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main
-Wed May 03 17:52:17 2023
+Thu May 04 11:20:08 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -22,10 +22,9 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  14. Port Connectivity Checks: "processor:add_instance|IFID:ifid_pipeline_register"
  15. Port Connectivity Checks: "processor:add_instance|MUX_8X1_16BIT:pcmux"
  16. Port Connectivity Checks: "processor:add_instance|alu1:alu_1"
- 17. Port Connectivity Checks: "processor:add_instance|register_file:rf"
- 18. Post-Synthesis Netlist Statistics for Top Partition
- 19. Elapsed Time Per Partition
- 20. Analysis & Synthesis Messages
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
 
 
 
@@ -52,7 +51,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 03 17:52:17 2023       ;
+; Analysis & Synthesis Status        ; Successful - Thu May 04 11:20:08 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; main                                        ;
 ; Top-level Entity Name              ; DUT                                         ;
@@ -205,6 +204,7 @@ https://fpgasoftware.intel.com/eula.
 ; MUX_2x1_3bit.vhdl                ; yes             ; User VHDL File  ; C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_2x1_3bit.vhdl  ;         ;
 ; MUX_4x1_3bit.vhd                 ; yes             ; User VHDL File  ; C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_4x1_3bit.vhd   ;         ;
 ; DUT.vhdl                         ; yes             ; User VHDL File  ; C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/DUT.vhdl           ;         ;
+; lmsm_block_1.vhdl                ; yes             ; User VHDL File  ; C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl  ;         ;
 +----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
 
 
@@ -348,15 +348,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+-------+----------+---------------------------------+
 
 
-+---------------------------------------------------------------------+
-; Port Connectivity Checks: "processor:add_instance|register_file:rf" ;
-+------+-------+----------+-------------------------------------------+
-; Port ; Type  ; Severity ; Details                                   ;
-+------+-------+----------+-------------------------------------------+
-; pc_w ; Input ; Info     ; Stuck at VCC                              ;
-+------+-------+----------+-------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-------------------+---------------------------------+
@@ -384,7 +375,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed May 03 17:52:05 2023
+    Info: Processing started: Thu May 04 11:19:58 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pipelined_risc -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -492,23 +483,26 @@ Info (12021): Found 2 design units, including 1 entities, in source file mux_4x1
 Info (12021): Found 2 design units, including 1 entities, in source file dut.vhdl
     Info (12022): Found design unit 1: DUT-DutWrap File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/DUT.vhdl Line: 11
     Info (12023): Found entity 1: DUT File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/DUT.vhdl Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file lmsm_block_1.vhdl
+    Info (12022): Found design unit 1: lmsm_block-haha File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl Line: 18
+    Info (12023): Found entity 1: lmsm_block File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl Line: 9
 Info (12127): Elaborating entity "DUT" for the top level hierarchy
 Info (12128): Elaborating entity "processor" for hierarchy "processor:add_instance" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/DUT.vhdl Line: 19
-Warning (10036): Verilog HDL or VHDL warning at main.vhdl(233): object "pc_out_mawb" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 233
-Warning (10036): Verilog HDL or VHDL warning at main.vhdl(235): object "alu1x_mawb" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 235
-Warning (10036): Verilog HDL or VHDL warning at main.vhdl(235): object "rfd1_mawb" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 235
-Warning (10036): Verilog HDL or VHDL warning at main.vhdl(235): object "rfd2_mawb" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 235
-Warning (10540): VHDL Signal Declaration warning at main.vhdl(239): used explicit default value for signal "stall_ifid" because signal was never assigned a value File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 239
-Warning (10540): VHDL Signal Declaration warning at main.vhdl(239): used explicit default value for signal "stall_idrr" because signal was never assigned a value File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 239
-Warning (10540): VHDL Signal Declaration warning at main.vhdl(239): used explicit default value for signal "stall_rrex" because signal was never assigned a value File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 239
-Warning (10036): Verilog HDL or VHDL warning at main.vhdl(246): object "flags_wb" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 246
-Warning (10036): Verilog HDL or VHDL warning at main.vhdl(254): object "mawb_5_0" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 254
-Warning (10036): Verilog HDL or VHDL warning at main.vhdl(256): object "mawb_8_0" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 256
-Warning (10036): Verilog HDL or VHDL warning at main.vhdl(258): object "mawb_7_0" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 258
-Info (12128): Elaborating entity "register_file" for hierarchy "processor:add_instance|register_file:rf" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 266
-Info (12128): Elaborating entity "instrmem" for hierarchy "processor:add_instance|instrmem:mem1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 268
-Info (12128): Elaborating entity "alu1" for hierarchy "processor:add_instance|alu1:alu_1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 270
-Info (12128): Elaborating entity "MUX_8X1_16BIT" for hierarchy "processor:add_instance|MUX_8X1_16BIT:pcmux" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 272
+Warning (10036): Verilog HDL or VHDL warning at main.vhdl(242): object "pc_out_mawb" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 242
+Warning (10036): Verilog HDL or VHDL warning at main.vhdl(244): object "alu1x_mawb" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 244
+Warning (10036): Verilog HDL or VHDL warning at main.vhdl(244): object "rfd1_mawb" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 244
+Warning (10036): Verilog HDL or VHDL warning at main.vhdl(244): object "rfd2_mawb" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 244
+Warning (10540): VHDL Signal Declaration warning at main.vhdl(248): used explicit default value for signal "stall_ifid" because signal was never assigned a value File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 248
+Warning (10540): VHDL Signal Declaration warning at main.vhdl(248): used explicit default value for signal "stall_idrr" because signal was never assigned a value File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 248
+Warning (10540): VHDL Signal Declaration warning at main.vhdl(248): used explicit default value for signal "stall_rrex" because signal was never assigned a value File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 248
+Warning (10036): Verilog HDL or VHDL warning at main.vhdl(257): object "flags_wb" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 257
+Warning (10036): Verilog HDL or VHDL warning at main.vhdl(265): object "mawb_5_0" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 265
+Warning (10036): Verilog HDL or VHDL warning at main.vhdl(267): object "mawb_8_0" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 267
+Warning (10036): Verilog HDL or VHDL warning at main.vhdl(269): object "mawb_7_0" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 269
+Info (12128): Elaborating entity "register_file" for hierarchy "processor:add_instance|register_file:rf" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 278
+Info (12128): Elaborating entity "instrmem" for hierarchy "processor:add_instance|instrmem:mem1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 280
+Info (12128): Elaborating entity "alu1" for hierarchy "processor:add_instance|alu1:alu_1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 282
+Info (12128): Elaborating entity "MUX_8X1_16BIT" for hierarchy "processor:add_instance|MUX_8X1_16BIT:pcmux" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 284
 Info (12128): Elaborating entity "MUX_8X1_4BIT" for hierarchy "processor:add_instance|MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_16BIT.vhdl Line: 20
 Info (12128): Elaborating entity "MUX_8x1" for hierarchy "processor:add_instance|MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL Line: 22
 Info (12128): Elaborating entity "MUX_4_1" for hierarchy "processor:add_instance|MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M1|MUX_4_1:M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_1bit.vhdl Line: 24
@@ -516,22 +510,49 @@ Info (12128): Elaborating entity "MUX_2_1" for hierarchy "processor:add_instance
 Info (12128): Elaborating entity "INVERTER" for hierarchy "processor:add_instance|MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M1|MUX_4_1:M1|MUX_2_1:MUX2_1|INVERTER:NOT1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX _2X1_1Bit.vhdl Line: 16
 Info (12128): Elaborating entity "AND_2" for hierarchy "processor:add_instance|MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M1|MUX_4_1:M1|MUX_2_1:MUX2_1|AND_2:AND1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX _2X1_1Bit.vhdl Line: 17
 Info (12128): Elaborating entity "OR_2" for hierarchy "processor:add_instance|MUX_8X1_16BIT:pcmux|MUX_8X1_4BIT:M1|MUX_8x1:M1|MUX_4_1:M1|MUX_2_1:MUX2_1|OR_2:OR1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX _2X1_1Bit.vhdl Line: 20
-Info (12128): Elaborating entity "IFID" for hierarchy "processor:add_instance|IFID:ifid_pipeline_register" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 275
+Info (12128): Elaborating entity "IFID" for hierarchy "processor:add_instance|IFID:ifid_pipeline_register" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 288
 Warning (10492): VHDL Process Statement warning at pipeline_regs.vhdl(21): signal "stall" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/pipeline_regs.vhdl Line: 21
-Info (12128): Elaborating entity "memsplit" for hierarchy "processor:add_instance|memsplit:decoder" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 282
-Info (12128): Elaborating entity "IDRR" for hierarchy "processor:add_instance|IDRR:idrr_pipeline_register" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 284
+Info (12128): Elaborating entity "lmsm_block" for hierarchy "processor:add_instance|lmsm_block:lmsm_thing" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 295
+Warning (10036): Verilog HDL or VHDL warning at lmsm_block_1.vhdl(20): object "point" assigned a value but never read File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl Line: 20
+Warning (10492): VHDL Process Statement warning at lmsm_block_1.vhdl(26): signal "was_in_process" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl Line: 26
+Warning (10492): VHDL Process Statement warning at lmsm_block_1.vhdl(65): signal "imm_val" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl Line: 65
+Warning (10631): VHDL Process Statement warning at lmsm_block_1.vhdl(23): inferring latch(es) for signal or variable "Mem1_D_out", which holds its previous value in one or more paths through the process File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl Line: 23
+Warning (10631): VHDL Process Statement warning at lmsm_block_1.vhdl(23): inferring latch(es) for signal or variable "disable_cuz_of_lmsm", which holds its previous value in one or more paths through the process File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl Line: 23
+Warning (10631): VHDL Process Statement warning at lmsm_block_1.vhdl(23): inferring latch(es) for signal or variable "Mem1_D_send_to_IFID", which holds its previous value in one or more paths through the process File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl Line: 23
+Info (10041): Inferred latch for "Mem1_D_send_to_IFID[0]" at lmsm_block_1.vhdl(23) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl Line: 23
+Info (10041): Inferred latch for "Mem1_D_send_to_IFID[1]" at lmsm_block_1.vhdl(23) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl Line: 23
+Info (10041): Inferred latch for "Mem1_D_send_to_IFID[2]" at lmsm_block_1.vhdl(23) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl Line: 23
+Info (10041): Inferred latch for "Mem1_D_send_to_IFID[3]" at lmsm_block_1.vhdl(23) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl Line: 23
+Info (10041): Inferred latch for "Mem1_D_send_to_IFID[4]" at lmsm_block_1.vhdl(23) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl Line: 23
+Info (10041): Inferred latch for "Mem1_D_send_to_IFID[5]" at lmsm_block_1.vhdl(23) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl Line: 23
+Info (10041): Inferred latch for "Mem1_D_send_to_IFID[6]" at lmsm_block_1.vhdl(23) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl Line: 23
+Info (10041): Inferred latch for "Mem1_D_send_to_IFID[7]" at lmsm_block_1.vhdl(23) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl Line: 23
+Info (10041): Inferred latch for "Mem1_D_send_to_IFID[8]" at lmsm_block_1.vhdl(23) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl Line: 23
+Info (10041): Inferred latch for "Mem1_D_send_to_IFID[9]" at lmsm_block_1.vhdl(23) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl Line: 23
+Info (10041): Inferred latch for "Mem1_D_send_to_IFID[10]" at lmsm_block_1.vhdl(23) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl Line: 23
+Info (10041): Inferred latch for "Mem1_D_send_to_IFID[11]" at lmsm_block_1.vhdl(23) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl Line: 23
+Info (10041): Inferred latch for "Mem1_D_send_to_IFID[12]" at lmsm_block_1.vhdl(23) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl Line: 23
+Info (10041): Inferred latch for "Mem1_D_send_to_IFID[13]" at lmsm_block_1.vhdl(23) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl Line: 23
+Info (10041): Inferred latch for "Mem1_D_send_to_IFID[14]" at lmsm_block_1.vhdl(23) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl Line: 23
+Info (10041): Inferred latch for "Mem1_D_send_to_IFID[15]" at lmsm_block_1.vhdl(23) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl Line: 23
+Info (10041): Inferred latch for "disable_cuz_of_lmsm" at lmsm_block_1.vhdl(23) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl Line: 23
+Info (10041): Inferred latch for "Mem1_D_out[9]" at lmsm_block_1.vhdl(23) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl Line: 23
+Info (10041): Inferred latch for "Mem1_D_out[10]" at lmsm_block_1.vhdl(23) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl Line: 23
+Info (10041): Inferred latch for "Mem1_D_out[11]" at lmsm_block_1.vhdl(23) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl Line: 23
+Info (12128): Elaborating entity "memsplit" for hierarchy "processor:add_instance|memsplit:decoder" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 297
+Info (12128): Elaborating entity "IDRR" for hierarchy "processor:add_instance|IDRR:idrr_pipeline_register" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 299
 Warning (10492): VHDL Process Statement warning at pipeline_regs.vhdl(63): signal "stall" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/pipeline_regs.vhdl Line: 63
-Info (12128): Elaborating entity "MUX_2X1_3BIT" for hierarchy "processor:add_instance|MUX_2X1_3BIT:rfa1_mux" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 295
-Info (12128): Elaborating entity "RREX" for hierarchy "processor:add_instance|RREX:rrex_pipeline_register" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 297
+Info (12128): Elaborating entity "MUX_2X1_3BIT" for hierarchy "processor:add_instance|MUX_2X1_3BIT:rfa1_mux" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 310
+Info (12128): Elaborating entity "RREX" for hierarchy "processor:add_instance|RREX:rrex_pipeline_register" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 312
 Warning (10492): VHDL Process Statement warning at pipeline_regs.vhdl(123): signal "stall" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/pipeline_regs.vhdl Line: 123
-Info (12128): Elaborating entity "se10" for hierarchy "processor:add_instance|se10:se_10" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 309
-Info (12128): Elaborating entity "se7" for hierarchy "processor:add_instance|se7:se_7" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 311
-Info (12128): Elaborating entity "MUX_2x1_16BIT" for hierarchy "processor:add_instance|MUX_2x1_16BIT:alu2a_pipeline_mux" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 313
+Info (12128): Elaborating entity "se10" for hierarchy "processor:add_instance|se10:se_10" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 324
+Info (12128): Elaborating entity "se7" for hierarchy "processor:add_instance|se7:se_7" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 326
+Info (12128): Elaborating entity "MUX_2x1_16BIT" for hierarchy "processor:add_instance|MUX_2x1_16BIT:alu2a_pipeline_mux" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 328
 Info (12128): Elaborating entity "MUX_2X1_4BIT" for hierarchy "processor:add_instance|MUX_2x1_16BIT:alu2a_pipeline_mux|MUX_2X1_4BIT:M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_2x1_16Bit.vhdl Line: 20
-Info (12128): Elaborating entity "MUX_4x1_16BIT" for hierarchy "processor:add_instance|MUX_4x1_16BIT:alu2b_pipeline_mux" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 318
+Info (12128): Elaborating entity "MUX_4x1_16BIT" for hierarchy "processor:add_instance|MUX_4x1_16BIT:alu2b_pipeline_mux" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 333
 Info (12128): Elaborating entity "MUX_4X1_4BIT" for hierarchy "processor:add_instance|MUX_4x1_16BIT:alu2b_pipeline_mux|MUX_4X1_4BIT:M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_4X1_16BIT.VHDL Line: 21
-Info (12128): Elaborating entity "compblock" for hierarchy "processor:add_instance|compblock:complement_block" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 323
-Info (12128): Elaborating entity "alu2" for hierarchy "processor:add_instance|alu2:alu_2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 325
+Info (12128): Elaborating entity "compblock" for hierarchy "processor:add_instance|compblock:complement_block" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 338
+Info (12128): Elaborating entity "alu2" for hierarchy "processor:add_instance|alu2:alu_2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 340
 Warning (10492): VHDL Process Statement warning at alu2.vhdl(40): signal "disable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 40
 Warning (10631): VHDL Process Statement warning at alu2.vhdl(37): inferring latch(es) for signal or variable "X", which holds its previous value in one or more paths through the process File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
 Warning (10631): VHDL Process Statement warning at alu2.vhdl(37): inferring latch(es) for signal or variable "C", which holds its previous value in one or more paths through the process File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
@@ -554,14 +575,14 @@ Info (10041): Inferred latch for "X[12]" at alu2.vhdl(37) File: C:/Users/vedik/D
 Info (10041): Inferred latch for "X[13]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
 Info (10041): Inferred latch for "X[14]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
 Info (10041): Inferred latch for "X[15]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
-Info (12128): Elaborating entity "alu3" for hierarchy "processor:add_instance|alu3:alu_3" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 327
-Info (12128): Elaborating entity "alu4" for hierarchy "processor:add_instance|alu4:alu_4" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 331
-Info (12128): Elaborating entity "EXMA" for hierarchy "processor:add_instance|EXMA:exma_pipeline_register" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 333
-Info (12128): Elaborating entity "hazard_EX" for hierarchy "processor:add_instance|hazard_EX:hazard_block" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 338
-Info (12128): Elaborating entity "datamem" for hierarchy "processor:add_instance|datamem:mem2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 348
-Info (12128): Elaborating entity "MAWB" for hierarchy "processor:add_instance|MAWB:mawb_pipeline_register" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 350
+Info (12128): Elaborating entity "alu3" for hierarchy "processor:add_instance|alu3:alu_3" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 342
+Info (12128): Elaborating entity "alu4" for hierarchy "processor:add_instance|alu4:alu_4" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 346
+Info (12128): Elaborating entity "EXMA" for hierarchy "processor:add_instance|EXMA:exma_pipeline_register" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 348
+Info (12128): Elaborating entity "hazard_EX" for hierarchy "processor:add_instance|hazard_EX:hazard_block" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 353
+Info (12128): Elaborating entity "datamem" for hierarchy "processor:add_instance|datamem:mem2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 363
+Info (12128): Elaborating entity "MAWB" for hierarchy "processor:add_instance|MAWB:mawb_pipeline_register" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 365
 Warning (10541): VHDL Signal Declaration warning at pipeline_regs.vhdl(286): used implicit default value for signal "disable_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/pipeline_regs.vhdl Line: 286
-Info (12128): Elaborating entity "MUX_4X1_3BIT" for hierarchy "processor:add_instance|MUX_4X1_3BIT:rfa3_mux" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 362
+Info (12128): Elaborating entity "MUX_4X1_3BIT" for hierarchy "processor:add_instance|MUX_4X1_3BIT:rfa3_mux" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 377
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
@@ -570,10 +591,10 @@ Warning (21074): Design contains 2 input pin(s) that do not drive logic
 Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 23 warnings
-    Info: Peak virtual memory: 4810 megabytes
-    Info: Processing ended: Wed May 03 17:52:17 2023
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:15
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
+    Info: Peak virtual memory: 4808 megabytes
+    Info: Processing ended: Thu May 04 11:20:08 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:11
 
 

@@ -228,18 +228,29 @@ end component;
   port (I3,I2,I1,I0:in std_logic_vector(2 downto 0) ; S: in std_logic_vector(1 downto 0) ; Y : out std_logic_vector(2 downto 0));
  end component;
  
+ component lmsm_block is
+ 	port (Mem1_D: in std_logic_vector(15 downto 0);
+ 			prev_imm: in std_logic_vector(5 downto 0);
+			was_in_process: in std_Logic;
+ 			Mem1_D_out: out std_logic_vector(15 downto 0);
+ 			Mem1_D_send_to_IFID: out std_logic_vector(15 downto 0);
+ 			in_process,disable_cuz_of_lmsm: out std_logic);
+ end component;
+ 
  -- Initializing the required signals
  
  signal pc_in,pc_out,pc_out_ifid,pc_out_idrr,pc_out_rrex,pc_out_exma,pc_out_mawb,mem1_out,mem1_out_ifid,
 			mem1_out_idrr,mem1_out_rrex,mem1_out_exma,mem1_out_mawb,alu1x,alu1x_ifid,alu1x_idrr,alu1x_rrex,alu1x_exma,
 			alu1x_mawb,decoder_in,rfd1,rfd2,rfd3_in,se10_out,se7_out,rfd1_rrex,rfd2_rrex,rfd1_exma,rfd2_exma,rfd1_mawb,rfd2_mawb,
       cb_out,alu2a_in,alu2b_in,alu2x,alu2x_exma,alu2x_mawb,alu2a_pipeline,alu2b_pipeline,alu3x,alu3x_exma,alu3x_mawb,alu4a_in,alu4x,se7_exma,
-      se7_mawb,mem_data,mem_data_wb: std_logic_vector(15 downto 0);
+      se7_mawb,mem_data,mem_data_wb,mem1_out_not_lmsm,mem1_out_back_to_IFID,mem1_out_to_IFID: std_logic_vector(15 downto 0);
  
  signal rf_write,disable_ifid,disable_idrr,disable_rrex,disable_exma,disable_mawb,disable_idrr_forward,
 			disable_rrex_forward,disable_exma_forward,disable_idrr_hazard,disable_rrex_hazard,
 			disable_exma_hazard,disabled,stall_ifid,stall_idrr,stall_rrex,
-			rfa1_mux_control,alu4a_mux_control,alu2a_control,c_flag,z_flag,mem_enable: std_logic := '0';
+			rfa1_mux_control,alu4a_mux_control,alu2a_control,c_flag,z_flag,mem_enable,lmsm_in_process,lmsm_will_disable: std_logic := '0';
+ 
+ signal pc_enable: std_logic := '1';
  
  signal pc_mux_control: std_logic_vector(2 downto 0) := "000";
  
@@ -262,8 +273,9 @@ begin
  -----
  --Instruction Fetch Stage
  -----
+ pc_enable <= '0' when (lmsm_in_process = '1') else '1';
  
- rf: register_file port map(clk,reset,'1',rf_write,rfa1_in,idrr_8_6,rfa3_in,rfd3_in,pc_in,rfd1,rfd2,pc_out);
+ rf: register_file port map(clk,reset,pc_enable,rf_write,rfa1_in,idrr_8_6,rfa3_in,rfd3_in,pc_in,rfd1,rfd2,pc_out);
  
  mem1: instrmem port map(pc_out,mem1_out);
  
@@ -271,17 +283,20 @@ begin
  
  pcmux: MUX_8x1_16BIT port map("0000000000000000","0000000000000000",alu3x,mem_data,se7_out,alu4x,alu2x,
 											alu1x,pc_mux_control,pc_in);
+ mem1_out_to_IFID <= mem1_out_back_to_IFID when (lmsm_in_process = '1') else mem1_out;
  
- ifid_pipeline_register: IFID port map(mem1_out,pc_out,alu1x,mem1_out_ifid,pc_out_ifid,alu1x_ifid,disable_idrr_forward,disable_ifid,clk,stall_ifid);
+ ifid_pipeline_register: IFID port map(mem1_out_to_IFID,pc_out,alu1x,mem1_out_ifid,pc_out_ifid,alu1x_ifid,disable_idrr_forward,disable_ifid,clk,stall_ifid);
  
- disable_idrr <=  '1' when (disable_idrr_forward = '1' or disable_idrr_hazard = '1') else '0';
+ disable_idrr <=  '1' when (disable_idrr_forward = '1' or disable_idrr_hazard = '1' or lmsm_will_disable = '1') else '0';
  -----
  --Instruction Decode Stage
  -----
  
- decoder: memsplit port map(mem1_out_ifid,decoder_opcode,decoder_11_9,decoder_5_0,decoder_8_6,decoder_8_0,decoder_5_3,decoder_7_0);
+ lmsm_thing: lmsm_block port map(mem1_out_ifid,mem1_out_not_lmsm(5 downto 0),lmsm_in_process,mem1_out_not_lmsm,mem1_out_back_to_IFID,lmsm_in_process,lmsm_will_disable);
  
- idrr_pipeline_register: IDRR port map(mem1_out_ifid,pc_out_ifid,alu1x_ifid,decoder_opcode,decoder_11_9,
+ decoder: memsplit port map(mem1_out_not_lmsm,decoder_opcode,decoder_11_9,decoder_5_0,decoder_8_6,decoder_8_0,decoder_5_3,decoder_7_0);
+ 
+ idrr_pipeline_register: IDRR port map(mem1_out_not_lmsm,pc_out_ifid,alu1x_ifid,decoder_opcode,decoder_11_9,
 												decoder_8_6,decoder_5_0,decoder_8_0,decoder_5_3,decoder_7_0,opcode_idrr,idrr_11_9,
 												idrr_8_6,idrr_5_0,idrr_8_0,idrr_5_3,idrr_7_0,mem1_out_idrr,pc_out_idrr,alu1x_idrr,
 												disable_rrex_forward,rfa1_mux_control,disable_idrr,clk,stall_idrr);

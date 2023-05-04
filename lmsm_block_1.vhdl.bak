@@ -1,0 +1,55 @@
+library ieee;
+use ieee.std_logic_1164.all;
+library std;
+use std.standard.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_arith.all;	 
+use ieee.std_logic_unsigned.all;
+
+entity lmsm_block is
+	port (Mem1_D: in std_logic_vector(15 downto 0);
+			Mem1_D_out: out std_logic_vector(15 downto 0);
+			Mem1_D_send_to_IFID: out std_logic_vector(15 downto 0);
+			in_process: out std_logic);
+end entity;
+
+architecture haha of lmsm_block is
+begin
+signal address: std_logic_vector(2 downto 0);
+signal imm: std_logic_vector(7 downto 0);
+signal point: integer;
+process(Mem1_D)
+begin
+	if (Mem1_D(15 downto 13) /= "011") then
+		Mem1_D_out <= Mem1_D;
+		in_process <= '0';
+	else
+		if(Mem1_D(7 downto 0) = "00000000") then
+			Mem1_D_out <= Mem1_D;
+			in_process <= '0';
+		else
+			in_process <= '1';
+			Mem1_D_out(15 downto 13) <= "010";
+			Mem1_D_out(12) <= Mem1_D(12);
+			Mem1_D_out(5 downto 0) <= "000000";
+			Mem1_D_out(8 downto 6) <= Mem1_D(11 downto 9);
+			for i in 0 to 7 loop
+				if (Mem1_D(i) = '1') then
+					signal <= std_logic_vector(to_unsigned(7-i, signal'length);
+					Mem1_D_out(11 downto 9) <= signal;
+					point <= i;
+					exit;
+				else null;
+				end if;
+			end loop;
+			Mem1_D_send_to_IFID(15 downto 10) <= Mem1_D(15 downto 10);
+			for i in 0 to 7 loop
+				if (i /= point) then
+					Mem1_D_send_to_IFID(i) <= Mem1_D(i);
+				else
+					Mem1_D_send_to_IFID(i) <= '0';
+				end if;
+			end loop;
+end process;
+
+end architecture;
