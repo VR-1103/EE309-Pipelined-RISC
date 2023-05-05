@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main
-Thu May 04 11:20:08 2023
+Fri May 05 10:51:18 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -51,7 +51,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 04 11:20:08 2023       ;
+; Analysis & Synthesis Status        ; Successful - Fri May 05 10:51:18 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; main                                        ;
 ; Top-level Entity Name              ; DUT                                         ;
@@ -375,7 +375,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu May 04 11:19:58 2023
+    Info: Processing started: Fri May 05 10:51:05 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pipelined_risc -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -463,8 +463,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file alu1.vh
     Info (12022): Found design unit 1: alu1-pc File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu1.vhdl Line: 12
     Info (12023): Found entity 1: alu1 File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu1.vhdl Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file alu2.vhdl
-    Info (12022): Found design unit 1: alu2-execute File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 16
-    Info (12023): Found entity 1: alu2 File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 4
+    Info (12022): Found design unit 1: alu2-execute File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 20
+    Info (12023): Found entity 1: alu2 File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file alu3.vhdl
     Info (12022): Found design unit 1: alu3-add_with_carry File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu3.vhdl Line: 14
     Info (12023): Found entity 1: alu3 File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu3.vhdl Line: 4
@@ -553,28 +553,49 @@ Info (12128): Elaborating entity "MUX_4x1_16BIT" for hierarchy "processor:add_in
 Info (12128): Elaborating entity "MUX_4X1_4BIT" for hierarchy "processor:add_instance|MUX_4x1_16BIT:alu2b_pipeline_mux|MUX_4X1_4BIT:M1" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_4X1_16BIT.VHDL Line: 21
 Info (12128): Elaborating entity "compblock" for hierarchy "processor:add_instance|compblock:complement_block" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 338
 Info (12128): Elaborating entity "alu2" for hierarchy "processor:add_instance|alu2:alu_2" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 340
-Warning (10492): VHDL Process Statement warning at alu2.vhdl(40): signal "disable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 40
-Warning (10631): VHDL Process Statement warning at alu2.vhdl(37): inferring latch(es) for signal or variable "X", which holds its previous value in one or more paths through the process File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
-Warning (10631): VHDL Process Statement warning at alu2.vhdl(37): inferring latch(es) for signal or variable "C", which holds its previous value in one or more paths through the process File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
-Warning (10631): VHDL Process Statement warning at alu2.vhdl(37): inferring latch(es) for signal or variable "Z", which holds its previous value in one or more paths through the process File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
-Info (10041): Inferred latch for "Z" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
-Info (10041): Inferred latch for "C" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
-Info (10041): Inferred latch for "X[0]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
-Info (10041): Inferred latch for "X[1]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
-Info (10041): Inferred latch for "X[2]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
-Info (10041): Inferred latch for "X[3]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
-Info (10041): Inferred latch for "X[4]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
-Info (10041): Inferred latch for "X[5]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
-Info (10041): Inferred latch for "X[6]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
-Info (10041): Inferred latch for "X[7]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
-Info (10041): Inferred latch for "X[8]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
-Info (10041): Inferred latch for "X[9]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
-Info (10041): Inferred latch for "X[10]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
-Info (10041): Inferred latch for "X[11]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
-Info (10041): Inferred latch for "X[12]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
-Info (10041): Inferred latch for "X[13]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
-Info (10041): Inferred latch for "X[14]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
-Info (10041): Inferred latch for "X[15]" at alu2.vhdl(37) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 37
+Warning (10492): VHDL Process Statement warning at alu2.vhdl(67): signal "disable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 67
+Warning (10492): VHDL Process Statement warning at alu2.vhdl(70): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 70
+Warning (10492): VHDL Process Statement warning at alu2.vhdl(71): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 71
+Warning (10492): VHDL Process Statement warning at alu2.vhdl(72): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 72
+Warning (10631): VHDL Process Statement warning at alu2.vhdl(64): inferring latch(es) for signal or variable "temp", which holds its previous value in one or more paths through the process File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Warning (10631): VHDL Process Statement warning at alu2.vhdl(64): inferring latch(es) for signal or variable "X", which holds its previous value in one or more paths through the process File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Warning (10631): VHDL Process Statement warning at alu2.vhdl(64): inferring latch(es) for signal or variable "C", which holds its previous value in one or more paths through the process File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Warning (10631): VHDL Process Statement warning at alu2.vhdl(64): inferring latch(es) for signal or variable "tempz", which holds its previous value in one or more paths through the process File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "tempz" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "C" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "X[0]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "X[1]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "X[2]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "X[3]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "X[4]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "X[5]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "X[6]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "X[7]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "X[8]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "X[9]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "X[10]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "X[11]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "X[12]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "X[13]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "X[14]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "X[15]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "temp[0]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "temp[1]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "temp[2]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "temp[3]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "temp[4]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "temp[5]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "temp[6]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "temp[7]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "temp[8]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "temp[9]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "temp[10]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "temp[11]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "temp[12]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "temp[13]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "temp[14]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "temp[15]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
+Info (10041): Inferred latch for "temp[16]" at alu2.vhdl(64) File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl Line: 64
 Info (12128): Elaborating entity "alu3" for hierarchy "processor:add_instance|alu3:alu_3" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 342
 Info (12128): Elaborating entity "alu4" for hierarchy "processor:add_instance|alu4:alu_4" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 346
 Info (12128): Elaborating entity "EXMA" for hierarchy "processor:add_instance|EXMA:exma_pipeline_register" File: C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl Line: 348
@@ -591,10 +612,10 @@ Warning (21074): Design contains 2 input pin(s) that do not drive logic
 Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
-    Info: Peak virtual memory: 4808 megabytes
-    Info: Processing ended: Thu May 04 11:20:08 2023
-    Info: Elapsed time: 00:00:10
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 33 warnings
+    Info: Peak virtual memory: 4805 megabytes
+    Info: Processing ended: Fri May 05 10:51:18 2023
+    Info: Elapsed time: 00:00:13
     Info: Total CPU time (on all processors): 00:00:11
 
 

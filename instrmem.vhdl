@@ -14,7 +14,7 @@ architecture behav of instrmem is
 -- we take 40 memory locations for convenience, from 39 to 0
 type array_of_vectors is array (39 downto 0) of std_logic_vector(15 downto 0);
 signal memory_storage : array_of_vectors := 
-(0 => "0111001001000100",
+(0 => "1000001010000010",
 1 => "0100100110000001",
 2 => "0001001010011000",
 3 => "0001101100011001",

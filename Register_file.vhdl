@@ -28,10 +28,11 @@ begin
 RF_writing : process(PC_w, RF_W,clock)
     begin
         if(rising_edge(clock)) then
-		if (RF_W = '1') then
+				if (RF_W = '1') then
                 registers(to_integer(unsigned(A3))) <= D3;
-            
-            elsif (PC_w = '1') then
+				else null;
+				end if;
+            if (PC_w = '1') then
                 registers(0) <= PC_write;
             else
                 null;

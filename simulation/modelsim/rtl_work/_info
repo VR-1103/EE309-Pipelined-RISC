@@ -23,9 +23,9 @@ Vda>l0KCKS54AeRhl5@m193
 !s100 NT_:jC8WnaPaezBMdL_i]1
 Z6 OV;C;2020.1;71
 31
-Z7 !s110 1683179421
+Z7 !s110 1683264097
 !i10b 1
-Z8 !s108 1683179421.000000
+Z8 !s108 1683264097.000000
 Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu1.vhdl|
 Z10 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu1.vhdl|
 !i113 1
@@ -51,54 +51,60 @@ R10
 R11
 R12
 Ealu2
-Z13 w1683116523
+Z13 w1683201400
+Z14 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z15 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z16 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 R2
 R3
 !i122 11
 R0
-Z14 8C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl
-Z15 FC:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl
+Z17 8C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl
+Z18 FC:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl
 l0
-L4 1
-VJ>hQnYPY8hhUo4;CmchE83
-!s100 2lC;H1WjD7B@@T8B<nm191
+L8 1
+VJMeYjIle?``kZ<e?<L83;2
+!s100 _ZGT:W7^oVKNhRaLgg:H[3
 R6
 31
 R7
 !i10b 1
 R8
-Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl|
-Z17 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl|
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl|
+Z20 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu2.vhdl|
 !i113 1
 R11
 R12
 Aexecute
+R14
+R15
+R16
 R2
 R3
-DEx4 work 4 alu2 0 22 J>hQnYPY8hhUo4;CmchE83
+DEx4 work 4 alu2 0 22 JMeYjIle?``kZ<e?<L83;2
 !i122 11
-l36
-L16 60
-Vo=7Mh1YVZkMI4j7z;;F]>3
-!s100 QihSN55X`PgWU<0ezj^7h2
+l61
+L20 94
+V:XMe;X[<bVIj5?^Sz?D5D2
+!s100 AY>OG4_GFWlRf5MmlQY>Y2
 R6
 31
 R7
 !i10b 1
 R8
-R16
-R17
+R19
+R20
 !i113 1
 R11
 R12
 Ealu3
-Z18 w1683043584
+Z21 w1683043584
 R2
 R3
 !i122 12
 R0
-Z19 8C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu3.vhdl
-Z20 FC:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu3.vhdl
+Z22 8C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu3.vhdl
+Z23 FC:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu3.vhdl
 l0
 L4 1
 VSWh>Q<z;@`7PlB[zTJ`1P3
@@ -108,8 +114,8 @@ R6
 R7
 !i10b 1
 R8
-Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu3.vhdl|
-Z22 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu3.vhdl|
+Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu3.vhdl|
+Z25 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu3.vhdl|
 !i113 1
 R11
 R12
@@ -127,30 +133,30 @@ R6
 R7
 !i10b 1
 R8
-R21
-R22
+R24
+R25
 !i113 1
 R11
 R12
 Ealu4
-Z23 w1682941489
+Z26 w1682941489
 R2
 R3
 !i122 13
 R0
-Z24 8C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu4.vhdl
-Z25 FC:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu4.vhdl
+Z27 8C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu4.vhdl
+Z28 FC:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu4.vhdl
 l0
 L4 1
 Vo@8GY4F<6n;Th`Ajl;@Xo3
 !s100 NaP74XW<YKNoe0IfhF2f81
 R6
 31
-Z26 !s110 1683179422
+Z29 !s110 1683264098
 !i10b 1
-Z27 !s108 1683179422.000000
-Z28 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu4.vhdl|
-Z29 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu4.vhdl|
+R8
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu4.vhdl|
+Z31 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/alu4.vhdl|
 !i113 1
 R11
 R12
@@ -165,22 +171,22 @@ VAF15N_EhPReUcY>W0S5]?2
 !s100 a5^1H657Vmd[Kgi;nXQQW1
 R6
 31
-R26
-!i10b 1
-R27
-R28
 R29
+!i10b 1
+R8
+R30
+R31
 !i113 1
 R11
 R12
 Eand_2
-Z30 w1682846887
+Z32 w1682846887
 R2
 R3
 !i122 9
 R0
-Z31 8C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/Gates.vhdl
-Z32 FC:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/Gates.vhdl
+Z33 8C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/Gates.vhdl
+Z34 FC:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/Gates.vhdl
 l0
 L57 1
 VW2QdRhzH^gh`1Z4bifmBf3
@@ -190,8 +196,8 @@ R6
 R7
 !i10b 1
 R8
-Z33 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/Gates.vhdl|
-Z34 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/Gates.vhdl|
+Z35 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/Gates.vhdl|
+Z36 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/Gates.vhdl|
 !i113 1
 R11
 R12
@@ -209,19 +215,19 @@ R6
 R7
 !i10b 1
 R8
-R33
-R34
+R35
+R36
 !i113 1
 R11
 R12
 Ecompblock
-Z35 w1682944438
+Z37 w1682944438
 R2
 R3
 !i122 8
 R0
-Z36 8C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/compblock.vhdl
-Z37 FC:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/compblock.vhdl
+Z38 8C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/compblock.vhdl
+Z39 FC:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/compblock.vhdl
 l0
 L4 1
 V=im9aD:YUh>@]hQlNUzQW1
@@ -231,8 +237,8 @@ R6
 R7
 !i10b 1
 R8
-Z38 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/compblock.vhdl|
-Z39 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/compblock.vhdl|
+Z40 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/compblock.vhdl|
+Z41 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/compblock.vhdl|
 !i113 1
 R11
 R12
@@ -250,22 +256,22 @@ R6
 R7
 !i10b 1
 R8
-R38
-R39
+R40
+R41
 !i113 1
 R11
 R12
 Edatamem
-Z40 w1683178497
-Z41 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-Z42 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
-Z43 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z42 w1683178497
+R14
+R15
+R16
 R2
 R3
 !i122 7
 R0
-Z44 8C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/datamem.vhdl
-Z45 FC:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/datamem.vhdl
+Z43 8C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/datamem.vhdl
+Z44 FC:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/datamem.vhdl
 l0
 L6 1
 V4n4kmc4RJaj=@E<JaWUBO3
@@ -275,15 +281,15 @@ R6
 R7
 !i10b 1
 R8
-Z46 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/datamem.vhdl|
-Z47 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/datamem.vhdl|
+Z45 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/datamem.vhdl|
+Z46 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/datamem.vhdl|
 !i113 1
 R11
 R12
 Abehav
-R41
-R42
-R43
+R14
+R15
+R16
 R2
 R3
 DEx4 work 7 datamem 0 22 4n4kmc4RJaj=@E<JaWUBO3
@@ -297,28 +303,28 @@ R6
 R7
 !i10b 1
 R8
+R45
 R46
-R47
 !i113 1
 R11
 R12
 Edut
-Z48 w1683091126
+Z47 w1683091126
 R2
 R3
 !i122 14
 R0
-Z49 8C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/DUT.vhdl
-Z50 FC:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/DUT.vhdl
+Z48 8C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/DUT.vhdl
+Z49 FC:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/DUT.vhdl
 l0
 L7 1
 V57HQN`i4CnO=GWfj304_@0
 !s100 QB;Bzz0jTZ:j;Gz`zRkkW3
 R6
 31
-R26
+R29
 !i10b 1
-R27
+Z50 !s108 1683264098.000000
 Z51 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/DUT.vhdl|
 Z52 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/DUT.vhdl|
 !i113 1
@@ -335,9 +341,9 @@ VU;OF98odUGBbHo;`So9eC1
 !s100 lo^XOF>K:P`hk2@fD`IS03
 R6
 31
-R26
+R29
 !i10b 1
-R27
+R50
 R51
 R52
 !i113 1
@@ -357,11 +363,11 @@ V:V83XVk;ViO0X8CA;5EGJ0
 !s100 CVcT0gb`9=`P=@URCW5?]2
 R6
 31
-R7
+Z56 !s110 1683264096
 !i10b 1
-Z56 !s108 1683179420.000000
-Z57 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/pipeline_regs.vhdl|
-Z58 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/pipeline_regs.vhdl|
+Z57 !s108 1683264096.000000
+Z58 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/pipeline_regs.vhdl|
+Z59 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/pipeline_regs.vhdl|
 !i113 1
 R11
 R12
@@ -376,11 +382,11 @@ VZg?CF[>kc@K46WY^]cgME0
 !s100 jJPDhYN<fk7Ank7ZPKZ8Z3
 R6
 31
-R7
-!i10b 1
 R56
+!i10b 1
 R57
 R58
+R59
 !i113 1
 R11
 R12
@@ -388,10 +394,10 @@ Pgates
 R2
 R3
 !i122 9
-R30
-R0
-R31
 R32
+R0
+R33
+R34
 l0
 L7 1
 VNcY4A7TbR^WLRT`2c:]N[1
@@ -401,19 +407,19 @@ R6
 R7
 !i10b 1
 R8
-R33
-R34
+R35
+R36
 !i113 1
 R11
 R12
 Ehalf_adder
-R30
+R32
 R2
 R3
 !i122 9
 R0
-R31
-R32
+R33
+R34
 l0
 L124 1
 VIZiX8mi96cJ??CnPO^U<C3
@@ -423,8 +429,8 @@ R6
 R7
 !i10b 1
 R8
-R33
-R34
+R35
+R36
 !i113 1
 R11
 R12
@@ -442,29 +448,29 @@ R6
 R7
 !i10b 1
 R8
-R33
-R34
+R35
+R36
 !i113 1
 R11
 R12
 Ehazard_ex
-Z59 w1683109935
+Z60 w1683180641
 R3
 R2
-R43
+R16
 !i122 0
 R0
-Z60 8C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/hazard_1.vhdl
-Z61 FC:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/hazard_1.vhdl
+Z61 8C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/hazard_1.vhdl
+Z62 FC:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/hazard_1.vhdl
 l0
 L6 1
 V>73T9c641@SOFMS<ENLV@0
 !s100 jR=h2Hib0R<PELNz48_kB3
 R6
 31
-Z62 !s110 1683179420
-!i10b 1
 R56
+!i10b 1
+R57
 Z63 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/hazard_1.vhdl|
 Z64 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/hazard_1.vhdl|
 !i113 1
@@ -473,18 +479,18 @@ R12
 Ahazardous
 R3
 R2
-R43
+R16
 DEx4 work 9 hazard_ex 0 22 >73T9c641@SOFMS<ENLV@0
 !i122 0
 l19
 L15 64
-V^4M53PhF1T]IcJ_DLI^4e2
-!s100 bK];7WD@Fi_bI35z_h>VO1
+Vj>:A=aIPMXk]XdUBBmLOV3
+!s100 X_Pb5SNGZ?<HYfQ9[Y7E]1
 R6
 31
-R62
-!i10b 1
 R56
+!i10b 1
+R57
 R63
 R64
 !i113 1
@@ -504,11 +510,11 @@ VS9NHoC9>Z7K[ZOmF3?=D^1
 !s100 ^lhgI<E6AM]:QEQ?APQJo0
 R6
 31
-R7
-!i10b 1
 R56
+!i10b 1
 R57
 R58
+R59
 !i113 1
 R11
 R12
@@ -523,19 +529,19 @@ VeaPIoY85n;_edmCn3P2U63
 !s100 W5@YHS2bJBA`^dMA=cd=m1
 R6
 31
-R7
-!i10b 1
 R56
+!i10b 1
 R57
 R58
+R59
 !i113 1
 R11
 R12
 Eifid
 R53
-R42
-R41
-R43
+R15
+R14
+R16
 R2
 R3
 !i122 2
@@ -548,18 +554,18 @@ V4V`[5>HKLonz=T`9fEfmJ1
 !s100 C7^8R<F2lmW_W:2PGSW4X0
 R6
 31
-R7
-!i10b 1
 R56
+!i10b 1
 R57
 R58
+R59
 !i113 1
 R11
 R12
 Asimple
-R42
-R41
-R43
+R15
+R14
+R16
 R2
 R3
 DEx4 work 4 ifid 0 22 4V`[5>HKLonz=T`9fEfmJ1
@@ -570,19 +576,19 @@ VN_daQL]OhQR`TFooCK1`T0
 !s100 <]R3]<4:nYIB=QjX]X<VW1
 R6
 31
-R7
-!i10b 1
 R56
+!i10b 1
 R57
 R58
+R59
 !i113 1
 R11
 R12
 Einstrmem
-Z65 w1683122975
-R41
-R42
-R43
+Z65 w1683181212
+R14
+R15
+R16
 R2
 R3
 !i122 6
@@ -604,17 +610,17 @@ Z69 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/instrmem.vhdl|
 R11
 R12
 Abehav
-R41
-R42
-R43
+R14
+R15
+R16
 R2
 R3
 DEx4 work 8 instrmem 0 22 :M3KhQ4Z=9ZfX;Fi@z=C^2
 !i122 6
 l25
 L12 18
-VHz?iL:h72WfnJF:[?U8<T2
-!s100 kRiA_UhFomkNe?E7aVfHa0
+VOJ8oP^R?1^dIE8ANQhEIP1
+!s100 K6:OOgcfhgn`AF1l]`0^A2
 R6
 31
 R7
@@ -626,13 +632,13 @@ R69
 R11
 R12
 Einverter
-R30
+R32
 R2
 R3
 !i122 9
 R0
-R31
-R32
+R33
+R34
 l0
 L45 1
 V^STYmNzH_F58ZVT>FF?cU2
@@ -642,8 +648,8 @@ R6
 R7
 !i10b 1
 R8
-R33
-R34
+R35
+R36
 !i113 1
 R11
 R12
@@ -661,16 +667,16 @@ R6
 R7
 !i10b 1
 R8
-R33
-R34
+R35
+R36
 !i113 1
 R11
 R12
 Elmsm_block
 Z70 w1683179390
-R41
-R42
-R43
+R14
+R15
+R16
 R2
 R3
 !i122 15
@@ -683,18 +689,18 @@ VClmTTHH4X`D6DnaM4^io@0
 !s100 Jc72<k^ngA@3i:L84df@E2
 R6
 31
-R26
+R29
 !i10b 1
-R27
+R50
 Z73 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl|
 Z74 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/lmsm_block_1.vhdl|
 !i113 1
 R11
 R12
 Ahaha
-R41
-R42
-R43
+R14
+R15
+R16
 R2
 R3
 DEx4 work 10 lmsm_block 0 22 ClmTTHH4X`D6DnaM4^io@0
@@ -705,9 +711,9 @@ V6Yh[8dgE9_5IDmROhJ_7L2
 !s100 AMnR9_l9>keGHn3UgL;2f2
 R6
 31
-R26
+R29
 !i10b 1
-R27
+R50
 R73
 R74
 !i113 1
@@ -727,11 +733,11 @@ VPz;>m<8@bARcFf^ggAVFf1
 !s100 o_Rf3j_g?JPWJeZ82b<PO1
 R6
 31
-R7
-!i10b 1
 R56
+!i10b 1
 R57
 R58
+R59
 !i113 1
 R11
 R12
@@ -746,11 +752,11 @@ V<=V@RQfHb:_d;Ozm;mlhI1
 !s100 `CY:EI5<2:D3[eoHSKc:h0
 R6
 31
-R7
-!i10b 1
 R56
+!i10b 1
 R57
 R58
+R59
 !i113 1
 R11
 R12
@@ -796,7 +802,7 @@ R79
 R11
 R12
 Emux_2_1
-R30
+R32
 Z80 DPx4 work 5 gates 0 22 NcY4A7TbR^WLRT`2c:]N[1
 R2
 R3
@@ -810,11 +816,11 @@ V=c:7f3CQ?Y;2KYHRVKY2_0
 !s100 ;Ng<OSM_O5RU`=j=Gn9b73
 R6
 31
-Z83 !s110 1683179423
+Z83 !s110 1683264099
 !i10b 1
-R27
-Z84 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX _2X1_1Bit.vhdl|
-Z85 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX _2X1_1Bit.vhdl|
+Z84 !s108 1683264099.000000
+Z85 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX _2X1_1Bit.vhdl|
+Z86 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX _2X1_1Bit.vhdl|
 !i113 1
 R11
 R12
@@ -832,32 +838,32 @@ R6
 31
 R83
 !i10b 1
-R27
 R84
 R85
+R86
 !i113 1
 R11
 R12
 Emux_2x1_16bit
-Z86 w1683089478
+Z87 w1683089478
 R80
 R2
 R3
 !i122 22
 R0
-Z87 8C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_2x1_16Bit.vhdl
-Z88 FC:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_2x1_16Bit.vhdl
+Z88 8C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_2x1_16Bit.vhdl
+Z89 FC:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_2x1_16Bit.vhdl
 l0
 L6 1
 VIXDaS4P?UgM1TZ=ZmYebF3
 !s100 oNMj70:VmXlaHb<N=l1C72
 R6
 31
-R26
+R29
 !i10b 1
-R27
-Z89 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_2x1_16Bit.vhdl|
-Z90 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_2x1_16Bit.vhdl|
+R50
+Z90 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_2x1_16Bit.vhdl|
+Z91 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_2x1_16Bit.vhdl|
 !i113 1
 R11
 R12
@@ -873,23 +879,23 @@ V`feooW_O23J`3HgE_:dhi1
 !s100 B:CW^D05MH[Xc5liHYNcI2
 R6
 31
-R26
+R29
 !i10b 1
-R27
-R89
+R50
 R90
+R91
 !i113 1
 R11
 R12
 Emux_2x1_3bit
-Z91 w1683088695
+Z92 w1683088695
 R80
 R2
 R3
 !i122 26
 R0
-Z92 8C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_2x1_3bit.vhdl
-Z93 FC:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_2x1_3bit.vhdl
+Z93 8C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_2x1_3bit.vhdl
+Z94 FC:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_2x1_3bit.vhdl
 l0
 L6 1
 VzTz;hKe5JBf@R5ED0S?gE1
@@ -898,7 +904,7 @@ R6
 31
 R83
 !i10b 1
-Z94 !s108 1683179423.000000
+R84
 Z95 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_2x1_3bit.vhdl|
 Z96 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_2x1_3bit.vhdl|
 !i113 1
@@ -918,14 +924,14 @@ R6
 31
 R83
 !i10b 1
-R94
+R84
 R95
 R96
 !i113 1
 R11
 R12
 Emux_2x1_4bit
-R30
+R32
 R80
 R2
 R3
@@ -939,9 +945,9 @@ VZ@F4a_PIg32D<_Fh40Clj2
 !s100 D@`IDX;aHmg]bnFKMl8Mi3
 R6
 31
-R26
+R83
 !i10b 1
-R27
+R84
 Z100 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_2x1_4bit.vhdl|
 Z101 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_2x1_4bit.vhdl|
 !i113 1
@@ -959,9 +965,9 @@ V97z>g5dIY]bjU_VgKHQz41
 !s100 0KNY@`kiibQQ@@bCFMlPZ3
 R6
 31
-R26
+R83
 !i10b 1
-R27
+R84
 R100
 R101
 !i113 1
@@ -982,9 +988,9 @@ V55L?jBkoh5cF;n:TJCTze3
 !s100 GRjH73ZVUON3`NSSRRl=Z2
 R6
 31
-R26
+R29
 !i10b 1
-R27
+R50
 Z105 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX4to1.vhdl|
 Z106 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX4to1.vhdl|
 !i113 1
@@ -1002,9 +1008,9 @@ VNd3oh2UAXP@k4kV=FAFga1
 !s100 N874_JlT45AZDz^780G5G2
 R6
 31
-R26
+R29
 !i10b 1
-R27
+R50
 R105
 R106
 !i113 1
@@ -1025,9 +1031,9 @@ V:Z7T1G_m6?8>CMdM68mF_1
 !s100 Q`RRLioEgYRnbd=6CaYDa1
 R6
 31
-R26
+R29
 !i10b 1
-R27
+R50
 Z110 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_4X1_16BIT.VHDL|
 Z111 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_4X1_16BIT.VHDL|
 !i113 1
@@ -1045,9 +1051,9 @@ VcngOMj>a0z=2DPlNT6@eo3
 !s100 B[ZIW87G;^^fN_3XzbnnP0
 R6
 31
-R26
+R29
 !i10b 1
-R27
+R50
 R110
 R111
 !i113 1
@@ -1070,7 +1076,7 @@ R6
 31
 R83
 !i10b 1
-R94
+R84
 Z115 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_4x1_3bit.vhd|
 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_4x1_3bit.vhd|
 !i113 1
@@ -1090,7 +1096,7 @@ R6
 31
 R83
 !i10b 1
-R94
+R84
 R115
 Z117 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_4x1_3bit.vhd|
 !i113 1
@@ -1111,9 +1117,9 @@ Vl^G@4zoS`O;I_3i;]6P5M1
 !s100 fP6[ViAj[e`O05Yle7cLZ0
 R6
 31
-R26
+R29
 !i10b 1
-R27
+R50
 Z121 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_4X1_4BIT.vhdl|
 Z122 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_4X1_4BIT.vhdl|
 !i113 1
@@ -1131,9 +1137,9 @@ V@1Qjn0]Uc::50@e4Bzj_j3
 !s100 ]S@P^OkKRDMTazh_6iTd42
 R6
 31
-R26
+R29
 !i10b 1
-R27
+R50
 R121
 R122
 !i113 1
@@ -1154,9 +1160,9 @@ VZ1B:cKlLiamabT401MO050
 !s100 T@BTJ^YigS9=iX7[M>7YS2
 R6
 31
-R26
+R29
 !i10b 1
-R27
+R50
 Z126 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_1bit.vhdl|
 Z127 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_1bit.vhdl|
 !i113 1
@@ -1174,9 +1180,9 @@ V1e@:YM<F1aPhO@?3:aY8T2
 !s100 ojckged9S2F@nX=XGd^7k1
 R6
 31
-R26
+R29
 !i10b 1
-R27
+R50
 R126
 R127
 !i113 1
@@ -1197,9 +1203,9 @@ VBAgV84Zi`5Q>O3KiCkoB03
 !s100 ]9EzbAJO=SlJ_aioi0hm62
 R6
 31
-R26
+R29
 !i10b 1
-R27
+R50
 Z131 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_16BIT.vhdl|
 Z132 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_16BIT.vhdl|
 !i113 1
@@ -1217,9 +1223,9 @@ V8b3AQ6OUY29H9ciWh7^oT0
 !s100 RREGf6<PklOP^`LV=AzU12
 R6
 31
-R26
+R29
 !i10b 1
-R27
+R50
 R131
 R132
 !i113 1
@@ -1240,9 +1246,9 @@ V=ATB7kM<P;lRI>BoLGDPg3
 !s100 QWmU_zmmAlhU?[7n4K[lk1
 R6
 31
-R26
+R29
 !i10b 1
-R27
+R50
 Z136 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL|
 Z137 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/MUX_8X1_4BIT.VHDL|
 !i113 1
@@ -1260,22 +1266,22 @@ V4WNVh=FXQQQENJQ=V[n_j1
 !s100 ^]ZlARH8nEYCaO8a]zgGF1
 R6
 31
-R26
+R29
 !i10b 1
-R27
+R50
 R136
 R137
 !i113 1
 R11
 R12
 Enand_2
-R30
+R32
 R2
 R3
 !i122 9
 R0
-R31
-R32
+R33
+R34
 l0
 L68 1
 V7Q=aZ>7Mzize[[IfQRQ;`2
@@ -1285,8 +1291,8 @@ R6
 R7
 !i10b 1
 R8
-R33
-R34
+R35
+R36
 !i113 1
 R11
 R12
@@ -1304,19 +1310,19 @@ R6
 R7
 !i10b 1
 R8
-R33
-R34
+R35
+R36
 !i113 1
 R11
 R12
 Enor_2
-R30
+R32
 R2
 R3
 !i122 9
 R0
-R31
-R32
+R33
+R34
 l0
 L90 1
 V3?]TGiHba`>]BD;kULm?^3
@@ -1326,8 +1332,8 @@ R6
 R7
 !i10b 1
 R8
-R33
-R34
+R35
+R36
 !i113 1
 R11
 R12
@@ -1345,19 +1351,19 @@ R6
 R7
 !i10b 1
 R8
-R33
-R34
+R35
+R36
 !i113 1
 R11
 R12
 Eor_2
-R30
+R32
 R2
 R3
 !i122 9
 R0
-R31
-R32
+R33
+R34
 l0
 L79 1
 V>IC]i[S3fUX<m=i^H@9eA0
@@ -1367,8 +1373,8 @@ R6
 R7
 !i10b 1
 R8
-R33
-R34
+R35
+R36
 !i113 1
 R11
 R12
@@ -1386,8 +1392,8 @@ R6
 R7
 !i10b 1
 R8
-R33
-R34
+R35
+R36
 !i113 1
 R11
 R12
@@ -1397,7 +1403,7 @@ R80
 Z139 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
 R3
 R2
-R43
+R16
 !i122 25
 R0
 Z140 8C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl
@@ -1410,7 +1416,7 @@ R6
 31
 R83
 !i10b 1
-R94
+R84
 Z142 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl|
 Z143 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/main.vhdl|
 !i113 1
@@ -1421,7 +1427,7 @@ R80
 R139
 R3
 R2
-R43
+R16
 DEx4 work 9 processor 0 22 YXW@bdM8=2TFeYg@6nj@b2
 !i122 25
 l271
@@ -1432,15 +1438,15 @@ R6
 31
 R83
 !i10b 1
-R94
+R84
 R142
 R143
 !i113 1
 R11
 R12
 Eregister_file
-Z144 w1683116033
-R43
+Z144 w1683264053
+R16
 R2
 R3
 !i122 1
@@ -1453,29 +1459,29 @@ VH07B8D9aFDcY>VN_0NK5o2
 !s100 VmGoji_XE55he`V3eAI3V3
 R6
 31
-R62
-!i10b 1
 R56
+!i10b 1
+R57
 Z147 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/Register_file.vhdl|
 Z148 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/Register_file.vhdl|
 !i113 1
 R11
 R12
 Abehav
-R43
+R16
 R2
 R3
 DEx4 work 13 register_file 0 22 H07B8D9aFDcY>VN_0NK5o2
 !i122 1
 l25
-L17 33
-Vh7CX:WaE8[63VXSjm:I_<1
-!s100 XCPb[X=W@:00Ci[;ge7H]0
+L17 34
+VFHKVZC[S7A]3z6gW[O:`i1
+!s100 ]Rfbo@;4Ch36PUHzZe==h3
 R6
 31
-R62
-!i10b 1
 R56
+!i10b 1
+R57
 R147
 R148
 !i113 1
@@ -1495,11 +1501,11 @@ V1R]NED0;7;66eI<8A3DX71
 !s100 O2m<lY]BVm_dM>eEW6J0`1
 R6
 31
-R7
-!i10b 1
 R56
+!i10b 1
 R57
 R58
+R59
 !i113 1
 R11
 R12
@@ -1514,11 +1520,11 @@ V?B8@bLnaelCOOdD6IoQhD3
 !s100 l@22RahmYng?D@Om0l1UQ0
 R6
 31
-R7
-!i10b 1
 R56
+!i10b 1
 R57
 R58
+R59
 !i113 1
 R11
 R12
@@ -1538,7 +1544,7 @@ R6
 31
 R7
 !i10b 1
-R8
+R57
 Z152 !s90 -reportprogress|300|-93|-work|work|C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/se10.vhdl|
 Z153 !s107 C:/Users/vedik/Documents/GitHub/EE309-Pipelined-RISC/se10.vhdl|
 !i113 1
@@ -1557,7 +1563,7 @@ R6
 31
 R7
 !i10b 1
-R8
+R57
 R152
 R153
 !i113 1
@@ -1605,13 +1611,13 @@ R158
 R11
 R12
 Exnor_2
-R30
+R32
 R2
 R3
 !i122 9
 R0
-R31
-R32
+R33
+R34
 l0
 L113 1
 VYmZa`=[Sj]6Zh9_O7]F;L0
@@ -1621,8 +1627,8 @@ R6
 R7
 !i10b 1
 R8
-R33
-R34
+R35
+R36
 !i113 1
 R11
 R12
@@ -1640,19 +1646,19 @@ R6
 R7
 !i10b 1
 R8
-R33
-R34
+R35
+R36
 !i113 1
 R11
 R12
 Exor_2
-R30
+R32
 R2
 R3
 !i122 9
 R0
-R31
-R32
+R33
+R34
 l0
 L102 1
 VDUd5fH`?6?dZ[>AnHc54;2
@@ -1662,8 +1668,8 @@ R6
 R7
 !i10b 1
 R8
-R33
-R34
+R35
+R36
 !i113 1
 R11
 R12
@@ -1681,8 +1687,8 @@ R6
 R7
 !i10b 1
 R8
-R33
-R34
+R35
+R36
 !i113 1
 R11
 R12

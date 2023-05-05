@@ -31,7 +31,7 @@ pc_mux_temp <=   "000" when(RREX_state_disable = '1')  else
             "001" when(((RREX_5_3 = "000" and (RREX_opcode = "0001" or RREX_opcode = "0010") and not(RREX_2_0 = "011" or RREX_2_0 = "111") ) or --all conditional A/L
                         (RREX_opcode = "0000" and RREX_8_6 ="000" )) and add_nand_load_op = '1') else
             "010" when((RREX_opcode = "1100" or RREX_opcode = "1101" or RREX_opcode = "1111") or (RREX_opcode = "1000"  and (alu2_flags = "01")) or      --all branch +jump
-                       (RREX_opcode = "1000"  and (alu2_flags = "10")) or (RREX_opcode = "1001"  and (alu2_flags = "10" or alu2_flags = "11"))) else
+                       (RREX_opcode = "1001"  and (alu2_flags = "10")) or (RREX_opcode = "1010"  and (alu2_flags = "10" or alu2_flags = "01"))) else
             "011" when (RREX_11_9 = "000" and RREX_opcode = "0011" and add_nand_load_op = '1') else   --LLI
             "100" when (EXMA_11_9 = "000" and  EXMA_opcode = "0100" and add_nand_load_op = '1') else   --LW 
             "101" when (RREX_5_3 = "000" and (RREX_opcode = "0001" or RREX_opcode = "0010") and (RREX_2_0 = "011" or RREX_2_0 = "111"))
